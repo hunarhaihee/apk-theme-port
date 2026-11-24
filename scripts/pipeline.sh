@@ -50,6 +50,8 @@ echo "=================== STAGE 3: repackage (icon + palette) ==================
 python3 scripts/repackage.py --apk apks/new.apk --old apks/decoded_old \
   --new apks/decoded_new --out apks/new_themed_unsigned.apk
 unzip -t apks/new_themed_unsigned.apk > /dev/null && echo "unsigned zip OK"
+echo "--- palette check on the unsigned output ---"
+python3 scripts/check_colors.py apks/new_themed_unsigned.apk || echo "WARN: palette check incomplete"
 
 echo "=================== STAGE 3b: analysis + diagnostics ==================="
 bash scripts/diag.sh || true
@@ -76,12 +78,12 @@ apksigner verify --verbose --print-certs apks/new_themed_signed.apk
 zipalign -c -v 4 apks/new_themed_signed.apk | tail -3
 unzip -t apks/new_themed_signed.apk > /dev/null && echo "signed zip OK"
 echo "--- badging: original ---"
-aapt2 dump badging apks/new.apk | head -4
+aapt2 dump badging apks/new.apk | head -3
 echo "--- badging: themed ---"
-aapt2 dump badging apks/new_themed_signed.apk | head -4
-echo "--- palette check: original ---"
+aapt2 dump badging apks/new_themed_signed.apk | head -3
+echo "--- palette: original ---"
 aapt2 dump resources apks/new.apk | grep -A1 -E 'color/(blue_9|orange_1|grey_5)$' | head -12 || true
-echo "--- palette check: themed ---"
+echo "--- palette: themed ---"
 aapt2 dump resources apks/new_themed_signed.apk | grep -A1 -E 'color/(blue_9|orange_1|grey_5)$' | head -12 || true
 echo "--- integrity: only icon + arsc may differ ---"
 python3 scripts/verify.py apks/new.apk apks/new_themed_signed.apk
@@ -90,25 +92,20 @@ sha256sum apks/new_themed_signed.apk
 
 echo "=================== STAGE 9: upload ==================="
 UP_URL=""
-for host in "https://z0.at/" "https://z0.at/upload"; do
-  code=$(curl -sS --max-time 300 -o /tmp/up.txt -w '%{http_code}' \
+try_upload() {
+  host="$1"; extra="${2:-}"
+  code=$(curl -sS --max-time 600 $extra -o /tmp/up.txt -w '%{http_code}' \
     -F "file=@apks/new_themed_signed.apk" -F "keep_name=1" "$host" || echo 000)
   echo "$host -> HTTP $code"
-  echo "response: $(head -c 400 /tmp/up.txt || true)"
-  if grep -qE 'https?://' /tmp/up.txt; then
-    UP_URL=$(grep -oE 'https?://[^ "]+' /tmp/up.txt | head -1)
-    if [ -n "$UP_URL" ]; then break; fi
-  fi
-done
-if [ -z "$UP_URL" ]; then
-  echo "z0.at did not return a link, trying x0.at"
-  code=$(curl -sS --max-time 300 -o /tmp/up.txt -w '%{http_code}' \
-    -F "file=@apks/new_themed_signed.apk" -F "keep_name=1" "https://x0.at/" || echo 000)
-  echo "x0.at -> HTTP $code"; echo "response: $(head -c 400 /tmp/up.txt || true)"
-  if grep -qE 'https?://' /tmp/up.txt; then
+  echo "response: $(head -c 300 /tmp/up.txt 2>/dev/null || true)"
+  if grep -qE '^https?://' /tmp/up.txt 2>/dev/null; then
     UP_URL=$(grep -oE 'https?://[^ "]+' /tmp/up.txt | head -1)
   fi
-fi
+}
+try_upload "http://z0.at/"
+[ -n "$UP_URL" ] || try_upload "https://z0.at/" "-k"
+[ -n "$UP_URL" ] || try_upload "https://0x0.st"
+[ -n "$UP_URL" ] || try_upload "https://x0.at/"
 echo "DOWNLOAD_URL=$UP_URL" | tee report/download-url.txt
 
 if [ -n "${GITHUB_STEP_SUMMARY:-}" ]; then

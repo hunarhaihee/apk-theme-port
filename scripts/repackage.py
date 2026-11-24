@@ -25,6 +25,9 @@ from xml.etree import ElementTree as ET
 
 from PIL import Image
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import arsc  # noqa: E402
+
 AAPT2 = os.environ.get("AAPT2", "aapt2")
 LOG = []
 
@@ -68,8 +71,27 @@ def resolve(colors, value, depth=0):
     return None
 
 
+def public_color_ids(decoded_new):
+    ids = {}
+    path = os.path.join(decoded_new, "res", "values", "public.xml")
+    if not os.path.exists(path):
+        log("[warn] no public.xml in decoded tree")
+        return ids
+    try:
+        root = ET.parse(path).getroot()
+    except Exception:  # noqa: BLE001
+        return ids
+    for ch in root:
+        if ch.tag.split("}")[-1] == "public" and ch.get("type") == "color":
+            try:
+                ids[ch.get("name")] = int(ch.get("id"), 16)
+            except (TypeError, ValueError):
+                continue
+    return ids
+
+
 def swap_color(data, cur_hex, new_hex):
-    """Replace every Res_value whose ARGB/RGB payload equals cur_hex."""
+    """Fallback: replace every Res_value whose payload equals cur_hex."""
     total = 0
     variants = []
     if len(cur_hex) == 9:
@@ -221,16 +243,15 @@ def main():
             changed[name] = (n.lower(), o.lower())
     log("colors that differ and can be ported:", len(changed))
 
-    by_cur = {}
-    for name, (cur, old) in changed.items():
-        by_cur.setdefault(cur, {}).setdefault(old, []).append(name)
-    pairs = []
-    for cur, olds in by_cur.items():
-        if len(olds) == 1:
-            old = next(iter(olds))
-            pairs.append((cur, old, olds[old]))
-        else:
-            log("  ambiguous current value", cur, "->", {k: v[:4] for k, v in olds.items()})
+    ids = public_color_ids(args.new)
+    targets = {}
+    for name, (_cur, old) in changed.items():
+        rid = ids.get(name)
+        if rid is None:
+            log("  no resource id for", name)
+            continue
+        targets[rid] = (name, old)
+    log("palette entries with a resource id:", len(targets))
 
     src_path = best_old_icon(args.old)
     if not src_path:
@@ -274,7 +295,7 @@ def main():
         preview[kind] = best
 
     removed = []
-    patched_colors = 0
+    patched_counts = {}
     with zipfile.ZipFile(args.out, "w", zipfile.ZIP_DEFLATED, allowZip64=True) as zout:
         for info in zin.infolist():
             name = info.filename
@@ -286,10 +307,19 @@ def main():
                 continue
             data = zin.read(name)
             if name == "resources.arsc":
-                for cur, old, owners in pairs:
-                    data, count = swap_color(data, cur, old)
-                    patched_colors += count
-                    log("  arsc color", cur, "->", old, "occurrences:", count, owners[:6])
+                data, patched_counts = arsc.patch_colors(data, targets, log)
+                for nm, c in sorted(patched_counts.items()):
+                    log("  patched color", nm, "entries:", c)
+                missing = [t[0] for rid, t in targets.items() if t[0] not in patched_counts]
+                if missing:
+                    log("  not found by id, byte-pattern fallback:", missing[:10])
+                    for rid, (nm, old) in targets.items():
+                        if nm not in missing:
+                            continue
+                        data, extra = swap_color(data, changed[nm][0], old)
+                        if extra:
+                            log("    fallback patched", nm, "occurrences:", extra)
+                            patched_counts[nm] = extra
             elif name in replacements:
                 data = replacements[name]
             zi = zipfile.ZipInfo(name, date_time=info.date_time)
@@ -306,18 +336,21 @@ def main():
 
     log("rewrote", args.out)
     log("icon entries replaced:", len(replacements))
-    log("arsc colour values patched:", patched_colors)
+    log("palette colours patched:", len(patched_counts))
     log("signature files dropped:", removed)
 
     write_preview(src, preview.get("legacy"), preview.get("foreground"), preview.get("background"))
 
+    expected = {nm: old for nm, old in ((t[0], t[1]) for t in targets.values()) if nm in patched_counts}
+    with open(os.path.join("report", "expected-colors.json"), "w") as fh:
+        json.dump(expected, fh, indent=1)
     with open(os.path.join("report", "replaced.json"), "w") as fh:
         json.dump(
             {
                 "replaced": sorted(replacements),
                 "removed": removed,
                 "colors": changed,
-                "patched_color_values": patched_colors,
+                "patched": patched_counts,
             },
             fh,
             indent=1,
