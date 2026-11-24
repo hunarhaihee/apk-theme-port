@@ -1,105 +1,101 @@
-EXIT CODE: 1
+EXIT CODE: 0
 ---------------- last 200 log lines ----------------
-264928534 res/zxz.xml (OK - compressed)
-264928801 res/zy-.xml (OK - compressed)
-264929063 res/zy0.xml (OK - compressed)
-264929349 res/zy1.xml (OK - compressed)
-264929613 res/zy2.xml (OK - compressed)
-264929879 res/zy3.xml (OK - compressed)
-264930271 res/zy4.xml (OK - compressed)
-264930532 res/zy5.xml (OK - compressed)
-264930803 res/zy6.xml (OK - compressed)
-264931159 res/zy7.xml (OK - compressed)
-264931461 res/zy8.xml (OK - compressed)
-264931864 res/zy9.xml (OK - compressed)
-264932428 res/zy_.xml (OK - compressed)
-264932689 res/zya.xml (OK - compressed)
-264933039 res/zyb.xml (OK - compressed)
-264933280 res/zyc.xml (OK - compressed)
-264933595 res/zyd.xml (OK - compressed)
-264934013 res/zye.xml (OK - compressed)
-264934408 res/zyf.xml (OK - compressed)
-264934738 res/zyg.xml (OK - compressed)
-264935004 res/zyh.xml (OK - compressed)
-264935269 res/zyi.xml (OK - compressed)
-264935529 res/zyj.xml (OK - compressed)
-264935800 res/zyk.xml (OK - compressed)
-264936025 res/zyl.xml (OK - compressed)
-264936251 res/zym.xml (OK - compressed)
-264936516 res/zyn.xml (OK - compressed)
-264936781 res/zyo.xml (OK - compressed)
-264937048 res/zyp.xml (OK - compressed)
-264937356 res/zyq.xml (OK - compressed)
-264937667 res/zyr.xml (OK - compressed)
-264937977 res/zys.xml (OK - compressed)
-264938286 res/zyt.xml (OK - compressed)
-264938550 res/zyu.xml (OK - compressed)
-264938814 res/zyv.xml (OK - compressed)
-264939079 res/zyw.xml (OK - compressed)
-264939448 res/zyx.xml (OK - compressed)
-264939714 res/zyy.xml (OK - compressed)
-264940062 res/zyz.xml (OK - compressed)
-264940325 res/zz-.xml (OK - compressed)
-264940592 res/zz0.png (OK)
-264973063 res/zz1.png (OK - compressed)
-264975156 res/zz2.xml (OK - compressed)
-264975505 res/zz3.xml (OK - compressed)
-264975800 res/zz4.xml (OK - compressed)
-264976064 res/zz5.xml (OK - compressed)
-264976327 res/zz6.xml (OK - compressed)
-264976598 res/zz7.xml (OK - compressed)
-264976825 res/zz8.xml (OK - compressed)
-264977093 res/zz9.xml (OK - compressed)
-264977356 res/zz_.xml (OK - compressed)
-264977627 res/zza.xml (OK - compressed)
-264977903 res/zzb.xml (OK - compressed)
-264978226 res/zzc.xml (OK - compressed)
-264978484 res/zzd.xml (OK - compressed)
-264978742 res/zze.xml (OK - compressed)
-264979031 res/zzf.xml (OK - compressed)
-264979410 res/zzg.xml (OK - compressed)
-264979680 res/zzh.xml (OK - compressed)
-264979945 res/zzi.xml (OK - compressed)
-264980210 res/zzj.xml (OK - compressed)
-264980476 res/zzk.xml (OK - compressed)
-264980786 res/zzl.xml (OK - compressed)
-264981308 res/zzm.xml (OK - compressed)
-264981532 res/zzn.xml (OK - compressed)
-264981846 res/zzo.xml (OK - compressed)
-264982112 res/zzp.xml (OK - compressed)
-264982463 res/zzq.xml (OK - compressed)
-264982714 res/zzr.xml (OK - compressed)
-264983029 res/zzs.xml (OK - compressed)
-264983255 res/zzt.xml (OK - compressed)
-264983505 res/zzu.xml (OK - compressed)
-264983857 res/zzv.xml (OK - compressed)
-264984153 res/zzw.xml (OK - compressed)
-264984471 res/zzy.xml (OK - compressed)
-264984767 res/zzz.xml (OK - compressed)
-264985224 resources.arsc (OK)
-271187583 review.properties (OK - compressed)
-271187678 src/google/protobuf/any.proto (OK - compressed)
-271190358 src/google/protobuf/api.proto (OK - compressed)
-271193336 src/google/protobuf/duration.proto (OK - compressed)
-271195455 src/google/protobuf/empty.proto (OK - compressed)
-271196727 src/google/protobuf/field_mask.proto (OK - compressed)
-271199920 src/google/protobuf/source_context.proto (OK - compressed)
-271201176 src/google/protobuf/struct.proto (OK - compressed)
-271202911 src/google/protobuf/timestamp.proto (OK - compressed)
-271205792 src/google/protobuf/type.proto (OK - compressed)
-271208233 src/google/protobuf/wrappers.proto (OK - compressed)
-271209833 transport-api.properties (OK - compressed)
-271209939 transport-backend-cct.properties (OK - compressed)
-271210049 transport-runtime.properties (OK - compressed)
-271210151 vision-common.properties (OK - compressed)
-271210251 vision-interfaces.properties (OK - compressed)
-271210359 webMain/default/linkdata/module (OK - compressed)
-271210511 webMain/default/linkdata/package_kotlinx.coroutines/0_coroutines.knm (OK - compressed)
-271211104 webMain/default/linkdata/package_kotlinx.coroutines/1_coroutines.knm (OK - compressed)
-271211656 webMain/default/linkdata/package_kotlinx.coroutines/2_coroutines.knm (OK - compressed)
-271213109 webMain/default/linkdata/package_kotlinx.coroutines.internal/0_internal.knm (OK - compressed)
-271213416 webMain/default/manifest (OK - compressed)
-271213565 stamp-cert-sha256 (OK - compressed)
+265104145 res/zy2.xml (OK - compressed)
+265104411 res/zy3.xml (OK - compressed)
+265104803 res/zy4.xml (OK - compressed)
+265105064 res/zy5.xml (OK - compressed)
+265105335 res/zy6.xml (OK - compressed)
+265105691 res/zy7.xml (OK - compressed)
+265105993 res/zy8.xml (OK - compressed)
+265106396 res/zy9.xml (OK - compressed)
+265106960 res/zy_.xml (OK - compressed)
+265107221 res/zya.xml (OK - compressed)
+265107571 res/zyb.xml (OK - compressed)
+265107812 res/zyc.xml (OK - compressed)
+265108127 res/zyd.xml (OK - compressed)
+265108545 res/zye.xml (OK - compressed)
+265108940 res/zyf.xml (OK - compressed)
+265109270 res/zyg.xml (OK - compressed)
+265109536 res/zyh.xml (OK - compressed)
+265109801 res/zyi.xml (OK - compressed)
+265110061 res/zyj.xml (OK - compressed)
+265110332 res/zyk.xml (OK - compressed)
+265110557 res/zyl.xml (OK - compressed)
+265110783 res/zym.xml (OK - compressed)
+265111048 res/zyn.xml (OK - compressed)
+265111313 res/zyo.xml (OK - compressed)
+265111580 res/zyp.xml (OK - compressed)
+265111888 res/zyq.xml (OK - compressed)
+265112199 res/zyr.xml (OK - compressed)
+265112509 res/zys.xml (OK - compressed)
+265112818 res/zyt.xml (OK - compressed)
+265113082 res/zyu.xml (OK - compressed)
+265113346 res/zyv.xml (OK - compressed)
+265113611 res/zyw.xml (OK - compressed)
+265113980 res/zyx.xml (OK - compressed)
+265114246 res/zyy.xml (OK - compressed)
+265114594 res/zyz.xml (OK - compressed)
+265114857 res/zz-.xml (OK - compressed)
+265115124 res/zz0.png (OK)
+265147595 res/zz1.png (OK - compressed)
+265149688 res/zz2.xml (OK - compressed)
+265150037 res/zz3.xml (OK - compressed)
+265150332 res/zz4.xml (OK - compressed)
+265150596 res/zz5.xml (OK - compressed)
+265150859 res/zz6.xml (OK - compressed)
+265151130 res/zz7.xml (OK - compressed)
+265151357 res/zz8.xml (OK - compressed)
+265151625 res/zz9.xml (OK - compressed)
+265151888 res/zz_.xml (OK - compressed)
+265152159 res/zza.xml (OK - compressed)
+265152435 res/zzb.xml (OK - compressed)
+265152758 res/zzc.xml (OK - compressed)
+265153016 res/zzd.xml (OK - compressed)
+265153274 res/zze.xml (OK - compressed)
+265153563 res/zzf.xml (OK - compressed)
+265153942 res/zzg.xml (OK - compressed)
+265154212 res/zzh.xml (OK - compressed)
+265154477 res/zzi.xml (OK - compressed)
+265154742 res/zzj.xml (OK - compressed)
+265155008 res/zzk.xml (OK - compressed)
+265155318 res/zzl.xml (OK - compressed)
+265155840 res/zzm.xml (OK - compressed)
+265156064 res/zzn.xml (OK - compressed)
+265156378 res/zzo.xml (OK - compressed)
+265156644 res/zzp.xml (OK - compressed)
+265156995 res/zzq.xml (OK - compressed)
+265157246 res/zzr.xml (OK - compressed)
+265157561 res/zzs.xml (OK - compressed)
+265157787 res/zzt.xml (OK - compressed)
+265158037 res/zzu.xml (OK - compressed)
+265158389 res/zzv.xml (OK - compressed)
+265158685 res/zzw.xml (OK - compressed)
+265159003 res/zzy.xml (OK - compressed)
+265159299 res/zzz.xml (OK - compressed)
+265159756 resources.arsc (OK)
+271362115 review.properties (OK - compressed)
+271362210 src/google/protobuf/any.proto (OK - compressed)
+271364890 src/google/protobuf/api.proto (OK - compressed)
+271367868 src/google/protobuf/duration.proto (OK - compressed)
+271369987 src/google/protobuf/empty.proto (OK - compressed)
+271371259 src/google/protobuf/field_mask.proto (OK - compressed)
+271374452 src/google/protobuf/source_context.proto (OK - compressed)
+271375708 src/google/protobuf/struct.proto (OK - compressed)
+271377443 src/google/protobuf/timestamp.proto (OK - compressed)
+271380324 src/google/protobuf/type.proto (OK - compressed)
+271382765 src/google/protobuf/wrappers.proto (OK - compressed)
+271384365 transport-api.properties (OK - compressed)
+271384471 transport-backend-cct.properties (OK - compressed)
+271384581 transport-runtime.properties (OK - compressed)
+271384683 vision-common.properties (OK - compressed)
+271384783 vision-interfaces.properties (OK - compressed)
+271384891 webMain/default/linkdata/module (OK - compressed)
+271385043 webMain/default/linkdata/package_kotlinx.coroutines/0_coroutines.knm (OK - compressed)
+271385636 webMain/default/linkdata/package_kotlinx.coroutines/1_coroutines.knm (OK - compressed)
+271386188 webMain/default/linkdata/package_kotlinx.coroutines/2_coroutines.knm (OK - compressed)
+271387641 webMain/default/linkdata/package_kotlinx.coroutines.internal/0_internal.knm (OK - compressed)
+271387948 webMain/default/manifest (OK - compressed)
+271388097 stamp-cert-sha256 (OK - compressed)
 Verification successful
 =================== STAGE 6: keystore ===================
 Generating 2,048 bit RSA key pair and self-signed certificate (SHA384withRSA) with a validity of 10,000 days
@@ -117,16 +113,16 @@ Verified using v4 scheme (APK Signature Scheme v4): false
 Verified for SourceStamp: false
 Number of signers: 1
 V3.0 Signer: certificate DN: CN=APK Theme Port, OU=Build, O=Port, L=Internet, C=US
-V3.0 Signer: certificate SHA-256 digest: b394f6e7ba0104bb1187d1d983f6aec592cea302815adbf2219a87190b6f8b97
-V3.0 Signer: certificate SHA-1 digest: 5a73a43e9fc4b87a5378dd207e2cab4a725023f4
-V3.0 Signer: certificate MD5 digest: 6c45b1cddd47e5e615ff34ce55e1c43b
+V3.0 Signer: certificate SHA-256 digest: b339b9938d7f3dbc5a9dc5292aae0a6ffdddec96d0faf4dcc0656fccf78f7096
+V3.0 Signer: certificate SHA-1 digest: 974f492c2fb5399806c4f32103aee9d81b2437c5
+V3.0 Signer: certificate MD5 digest: 73d611ecb54298e3a4c3968d3cd29708
 V3.0 Signer: key algorithm: RSA
 V3.0 Signer: key size (bits): 2048
-V3.0 Signer: public key SHA-256 digest: b14fa1b1564fae8f8ef1b3ec875d3aff5696b9913854b52524b60afac39da84f
-V3.0 Signer: public key SHA-1 digest: 0063bf5990ad28b338c4be3af7c541ec831b9158
-V3.0 Signer: public key MD5 digest: 524d1da7ebc71b71f6557a9c48b3f3f3
-271658313 META-INF/PORT.RSA (OK - compressed)
-271659466 META-INF/MANIFEST.MF (OK - compressed)
+V3.0 Signer: public key SHA-256 digest: b4613ef01158eb70094c32e2cd1c36b2a73049abf5146784cc246f4b0f7a7e3c
+V3.0 Signer: public key SHA-1 digest: 1db9d1126f27ecf9edb6feffd1d8e21c77f99391
+V3.0 Signer: public key MD5 digest: 30a078970cfdbdf227ade6975ef27298
+271832862 META-INF/PORT.RSA (OK - compressed)
+271834012 META-INF/MANIFEST.MF (OK - compressed)
 Verification successful
 signed zip OK
 --- badging: original ---
@@ -134,31 +130,11 @@ package: name='com.instagram.android' versionCode='386215111' versionName='456.1
 install-location:'auto'
 uses-permission-sdk-23: name='android.permission.ACCESS_WIFI_STATE'
 minSdkVersion:'28'
-targetSdkVersion:'37'
-uses-permission: name='android.permission.INTERNET'
 --- badging: themed ---
 package: name='com.instagram.android' versionCode='386215111' versionName='456.1.0.56.78' platformBuildVersionName='17' platformBuildVersionCode='37' compileSdkVersion='37' compileSdkVersionCodename='17'
 install-location:'auto'
 uses-permission-sdk-23: name='android.permission.ACCESS_WIFI_STATE'
 minSdkVersion:'28'
-targetSdkVersion:'37'
-uses-permission: name='android.permission.INTERNET'
---- icon resources: original ---
-    resource 0x7f100027 mipmap/icon
-      (mdpi) (file) res/jx-.png type=PNG
-      (hdpi) (file) res/e3z.png type=PNG
-      (xhdpi) (file) res/p64.png type=PNG
-      (xxhdpi) (file) res/uv6.png type=PNG
-      (xxxhdpi) (file) res/zcc.png type=PNG
-      (anydpi) (file) res/7b8.xml type=XML
---- icon resources: themed ---
-    resource 0x7f100027 mipmap/icon
-      (mdpi) (file) res/jx-.png type=PNG
-      (hdpi) (file) res/e3z.png type=PNG
-      (xhdpi) (file) res/p64.png type=PNG
-      (xxhdpi) (file) res/uv6.png type=PNG
-      (xxxhdpi) (file) res/zcc.png type=PNG
-      (anydpi) (file) res/7b8.xml type=XML
 --- palette check: original ---
     resource 0x7f0600c4 color/blue_9
       () #ff002952
@@ -186,17 +162,41 @@ uses-permission: name='android.permission.INTERNET'
       () #ffffdfc4
 --
 --- integrity: only icon + arsc may differ ---
-
-FAIL: output differs from the original APK outside the allowed set
 original: apks/new.apk (10987 entries)
 output:   apks/new_themed_signed.apk (10989 entries)
 dex files identical:    32/32
 native libs identical:  15/15
 assets identical:       3222/3222
-changed on purpose:     res/7de.png, res/7df.png, res/7er.png, res/7es.png, res/7f5.png, res/7f6.png, res/7hf.png, res/7hg.png, res/7is.png, res/7it.png, res/e3z.png, res/jx-.png, res/p64.png, res/uv6.png, res/zcc.png
-removed signatures:     none
-problems:               4
-  !! file missing from output: stamp-cert-sha256
-  !! unexpected new file: META-INF/MANIFEST.MF
-  !! unexpected new file: META-INF/PORT.RSA
-  !! unexpected new file: META-INF/PORT.SF
+changed on purpose:     res/7de.png, res/7df.png, res/7er.png, res/7es.png, res/7f5.png, res/7f6.png, res/7hf.png, res/7hg.png, res/7is.png, res/7it.png, res/e3z.png, res/jx-.png, res/p64.png, res/uv6.png, res/zcc.png, resources.arsc
+dropped old signature:  stamp-cert-sha256
+added new signature:    META-INF/MANIFEST.MF, META-INF/PORT.RSA, META-INF/PORT.SF
+problems:               0
+
+OK: only icon bitmaps + resources.arsc differ; code, libs and assets are untouched
+-rw-r--r-- 1 runner runner 273119020 Nov 24 12:44 apks/new_themed_signed.apk
+d5b18558dd8cfcd77dd16ce2a39c71f2568c8cb68c45160b095f19f9191ad75d  apks/new_themed_signed.apk
+=================== STAGE 9: upload ===================
+curl: (60) SSL: no alternative certificate subject name matches target hostname 'z0.at'
+More details here: https://curl.se/docs/sslcerts.html
+
+curl failed to verify the legitimacy of the server and therefore could not
+establish a secure connection to it. To learn more about this situation and
+how to fix it, please visit the webpage mentioned above.
+https://z0.at/ -> HTTP 000000
+head: cannot open '/tmp/up.txt' for reading: No such file or directory
+response: 
+grep: /tmp/up.txt: No such file or directory
+curl: (60) SSL: no alternative certificate subject name matches target hostname 'z0.at'
+More details here: https://curl.se/docs/sslcerts.html
+
+curl failed to verify the legitimacy of the server and therefore could not
+establish a secure connection to it. To learn more about this situation and
+how to fix it, please visit the webpage mentioned above.
+https://z0.at/upload -> HTTP 000000
+head: cannot open '/tmp/up.txt' for reading: No such file or directory
+response: 
+grep: /tmp/up.txt: No such file or directory
+z0.at did not return a link, trying x0.at
+x0.at -> HTTP 408
+response: 
+DOWNLOAD_URL=
