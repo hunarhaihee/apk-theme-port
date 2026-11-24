@@ -28,8 +28,6 @@ jobs:
         run: |
           set -euo pipefail
           SDK="${ANDROID_SDK_ROOT:-${ANDROID_HOME:-/usr/local/lib/android/sdk}}"
-          echo "SDK=$SDK"
-          ls "$SDK" || true
           export ANDROID_SDK_ROOT="$SDK" ANDROID_HOME="$SDK"
           BT=""
           if [ -d "$SDK/build-tools" ]; then
@@ -38,14 +36,12 @@ jobs:
           if [ -z "$BT" ] || [ ! -x "$SDK/build-tools/$BT/zipalign" ]; then
             SDKM="$(command -v sdkmanager || true)"
             [ -n "$SDKM" ] || SDKM="$SDK/cmdline-tools/latest/bin/sdkmanager"
-            echo "sdkmanager: $SDKM"
             ( yes | "$SDKM" --licenses > /dev/null 2>&1 ) || true
             ( yes | "$SDKM" "build-tools;34.0.0" > /dev/null 2>&1 ) || true
             BT="34.0.0"
           fi
           echo "build-tools version: $BT"
           echo "$SDK/build-tools/$BT" >> "$GITHUB_PATH"
-          ls "$SDK/build-tools/$BT" | head -20
           python3 -m pip install --quiet Pillow || python3 -m pip install --quiet --break-system-packages Pillow
           python3 -c "import PIL; print('Pillow', PIL.__version__)"
 
@@ -63,10 +59,9 @@ jobs:
         if: always()
         run: |
           mkdir -p ci
-          for f in report/summary.txt report/port-report.txt report/download-url.txt report/pipeline.log; do
+          for f in report/*.txt report/*.log; do
             if [ -f "$f" ]; then cp "$f" "ci/$(basename "$f")"; fi
           done
-          ls -l ci || true
           git config user.name "ci-bot"
           git config user.email "ci-bot@users.noreply.github.com"
           git add ci || true
