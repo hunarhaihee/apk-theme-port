@@ -1,0 +1,71 @@
+name: port
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+env:
+  OLD_ID: 13wcxu4zGVUC0VS6eiNYNq88Q7VArFLa6
+  NEW_ID: 1FdVb8AEZrSUY7eRERrArtpiJBNau9UFd
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Android SDK / build-tools
+        uses: android-actions/setup-android@v3
+
+      - name: Install build-tools 34
+        run: |
+          yes | sdkmanager --licenses > /dev/null 2>&1 || true
+          sdkmanager "build-tools;34.0.0" "platforms;android-34" > /dev/null
+          echo "$ANDROID_HOME/build-tools/34.0.0" >> "$GITHUB_PATH"
+          python3 -m pip install --quiet Pillow || python3 -m pip install --quiet --break-system-packages Pillow
+          python3 -c "import PIL, PIL.Image; print('Pillow', PIL.__version__)"
+
+      - name: Install apktool (iBotPeaches)
+        run: |
+          mkdir -p tools
+          curl -fsSL --retry 3 -o tools/apktool.jar \
+            https://github.com/iBotPeaches/Apktool/releases/download/v2.11.1/apktool_2.11.1.jar
+          java -jar tools/apktool.jar --version
+
+      - name: Run pipeline
+        run: bash scripts/pipeline.sh
+
+      - name: Show port report
+        if: always()
+        run: |
+          cat report/port-report.txt || true
+
+      - name: Upload artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: themed-apk
+          if-no-files-found: ignore
+          path: |
+            apks/new_themed_signed.apk
+            report/*.txt
+
+      - name: Attach APK to release
+        if: success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release delete themed-apk --yes --cleanup-tag 2>/dev/null || true
+          gh release create themed-apk apks/new_themed_signed.apk \
+            --title "Themed APK (old icon + theme, new features)" \
+            --notes "Signed with a freshly generated key. Uninstall the stock app first (signature differs)."
