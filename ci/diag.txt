@@ -1,0 +1,97 @@
+apktool: 3.0.3
+aapt2: /usr/local/lib/android/sdk/build-tools/37.0.0/aapt2 Android Asset Packaging Tool (aapt) 2.20-15087165
+
+================ OLD (apks/old.apk) ================
+version: package: name='com.instagram.android' versionCode='16887320' versionName='7.10.0' platformBuildVersionName='6.0-2166767' platformBuildVersionCode='23'
+res/layout files: 392
+res/drawable files: 152
+res/xml files: 0
+values*/layouts.xml files: 0
+total typed items across values*/layouts.xml: 0
+sample of values/layouts.xml:
+alias name -> layout file present?
+ORIGINAL arsc icon entries:
+        resource 0x7f0200ec drawable/icon
+          (ldpi-v4) (file) res/drawable-ldpi-v4/icon.png type=PNG
+          (mdpi-v4) (file) res/drawable-mdpi-v4/icon.png type=PNG
+adaptive icon xml in decoded tree:
+mipmap-*/icon* and ig_launcher* files:
+    apks/decoded_old/res/drawable-hdpi-v4/icon.png
+    apks/decoded_old/res/drawable-ldpi-v4/icon.png
+    apks/decoded_old/res/drawable-mdpi-v4/icon.png
+    apks/decoded_old/res/drawable-xhdpi-v4/icon.png
+    apks/decoded_old/res/drawable-xxhdpi-v4/icon.png
+    apks/decoded_old/res/drawable-xxxhdpi-v4/icon.png
+public.xml id for icon/ig_launcher:
+        <public type="attr" name="icon" id="0x7f010058" />
+        <public type="drawable" name="icon" id="0x7f0200ec" />
+        <public type="id" name="icon" id="0x7f0c00c2" />
+
+================ NEW (apks/new.apk) ================
+version: package: name='com.instagram.android' versionCode='386215111' versionName='456.1.0.56.78' platformBuildVersionName='17' platformBuildVersionCode='37' compileSdkVersion='37' compileSdkVersionCodename='17'
+res/layout files: 71
+res/drawable files: 5425
+res/xml files: 11
+values*/layouts.xml files: 4
+total typed items across values*/layouts.xml: 5962
+sample of values/layouts.xml:
+    <?xml version="1.0" encoding="utf-8"?>
+    <resources>
+        <item type="layout" name="ac_transition_second_level_top_banner" format="string">L|137E8|5C4|256A</item>
+        <item type="layout" name="ac_transition_top_banner" format="string">L|13DAC|6A0|B1A2</item>
+        <item type="layout" name="account_category_view" format="string">L|1444C|5D8|DB5A</item>
+        <item type="layout" name="account_linking_child_group_management_fragment" format="string">L|14A24|380|890</item>
+alias name -> layout file present?
+    ac_transition_second_level_top_banner -> NO layout file
+    ac_transition_top_banner -> NO layout file
+    account_category_view -> NO layout file
+    account_linking_child_group_management_fragment -> NO layout file
+    account_linking_igpc_password_creation_headline -> NO layout file
+    account_linking_igpc_to_ac_upsell_headline -> NO layout file
+ORIGINAL arsc entry for 'ac_transition_second_level_top_banner':
+        resource 0x7f0e0018 layout/ac_transition_second_level_top_banner
+          () "L|137E8|5C4|256A"
+        resource 0x7f0e0019 layout/ac_transition_top_banner
+          () "L|13DAC|6A0|B1A2"
+        resource 0x7f0e001a layout/account_category_view
+ORIGINAL arsc icon entries:
+        resource 0x7f100027 mipmap/icon
+          (mdpi) (file) res/jx-.png type=PNG
+          (hdpi) (file) res/e3z.png type=PNG
+adaptive icon xml in decoded tree:
+    apks/decoded_new/res/mipmap-anydpi/icon.xml
+  --- apks/decoded_new/res/mipmap-anydpi/icon.xml
+    <?xml version="1.0" encoding="utf-8"?>
+    <adaptive-icon
+      xmlns:android="http://schemas.android.com/apk/res/android">
+        <background android:drawable="@mipmap/ig_launcher_background" />
+        <foreground android:drawable="@mipmap/ig_launcher_foreground" />
+        <monochrome android:drawable="@drawable/ig_launcher_monochrome" />
+    </adaptive-icon>
+mipmap-*/icon* and ig_launcher* files:
+    apks/decoded_new/res/drawable-anydpi/ig_launcher_monochrome.xml
+    apks/decoded_new/res/mipmap-anydpi/icon.xml
+    apks/decoded_new/res/mipmap-hdpi/icon.png
+    apks/decoded_new/res/mipmap-hdpi/ig_launcher_background.png
+    apks/decoded_new/res/mipmap-hdpi/ig_launcher_foreground.png
+    apks/decoded_new/res/mipmap-mdpi/icon.png
+    apks/decoded_new/res/mipmap-mdpi/ig_launcher_background.png
+    apks/decoded_new/res/mipmap-mdpi/ig_launcher_foreground.png
+    apks/decoded_new/res/mipmap-xhdpi/icon.png
+    apks/decoded_new/res/mipmap-xhdpi/ig_launcher_background.png
+    apks/decoded_new/res/mipmap-xhdpi/ig_launcher_foreground.png
+    apks/decoded_new/res/mipmap-xxhdpi/icon.png
+    apks/decoded_new/res/mipmap-xxhdpi/ig_launcher_background.png
+    apks/decoded_new/res/mipmap-xxhdpi/ig_launcher_foreground.png
+    apks/decoded_new/res/mipmap-xxxhdpi/icon.png
+    apks/decoded_new/res/mipmap-xxxhdpi/ig_launcher_background.png
+    apks/decoded_new/res/mipmap-xxxhdpi/ig_launcher_foreground.png
+public.xml id for icon/ig_launcher:
+        <public type="attr" name="icon" id="0x7f040716" />
+        <public type="drawable" name="ig_launcher_monochrome" id="0x7f082200" />
+        <public type="id" name="icon" id="0x7f0b1d6b" />
+        <public type="mipmap" name="icon" id="0x7f100027" />
+        <public type="mipmap" name="ig_launcher_background" id="0x7f100028" />
+        <public type="mipmap" name="ig_launcher_foreground" id="0x7f100029" />
+
+================ END DIAG ================

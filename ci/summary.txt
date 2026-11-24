@@ -1,202 +1,202 @@
-EXIT CODE: 1
+EXIT CODE: 0
 ---------------- last 200 log lines ----------------
-apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_checkmarkcircle_outline_24.xml
-apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_checkmarkspikedcircle_filled_24.xml
-apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_checkmarksquare_filled_24.xml
-apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_circle_outline_24.xml
-apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_circledashedlefttwothirds_outline_24.xml
-apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_circlehandle_outline_24.xml
---- old values files ---
-apks/decoded_old/res/values-af/plurals.xml
-apks/decoded_old/res/values-af/strings.xml
-apks/decoded_old/res/values-ar/plurals.xml
-apks/decoded_old/res/values-ar/strings.xml
-apks/decoded_old/res/values-bn/plurals.xml
-apks/decoded_old/res/values-bn/strings.xml
-apks/decoded_old/res/values-cs/plurals.xml
-apks/decoded_old/res/values-cs/strings.xml
-apks/decoded_old/res/values-da/plurals.xml
-apks/decoded_old/res/values-da/strings.xml
-apks/decoded_old/res/values-de/plurals.xml
-apks/decoded_old/res/values-de/strings.xml
-apks/decoded_old/res/values-el/plurals.xml
-apks/decoded_old/res/values-el/strings.xml
-apks/decoded_old/res/values-es-rAR/plurals.xml
-apks/decoded_old/res/values-es-rAR/strings.xml
-apks/decoded_old/res/values-es-rES/plurals.xml
-apks/decoded_old/res/values-es-rES/strings.xml
-apks/decoded_old/res/values-es/plurals.xml
-apks/decoded_old/res/values-es/strings.xml
-apks/decoded_old/res/values-fb/plurals.xml
-apks/decoded_old/res/values-fb/strings.xml
-apks/decoded_old/res/values-fi/plurals.xml
-apks/decoded_old/res/values-fi/strings.xml
-apks/decoded_old/res/values-fr/plurals.xml
-apks/decoded_old/res/values-fr/strings.xml
-apks/decoded_old/res/values-gu/plurals.xml
-apks/decoded_old/res/values-gu/strings.xml
-apks/decoded_old/res/values-hdpi-v4/dimens.xml
-apks/decoded_old/res/values-hi/plurals.xml
-apks/decoded_old/res/values-hi/strings.xml
-apks/decoded_old/res/values-hr/strings.xml
-apks/decoded_old/res/values-hu/strings.xml
-apks/decoded_old/res/values-in/plurals.xml
-apks/decoded_old/res/values-in/strings.xml
-apks/decoded_old/res/values-it/plurals.xml
-apks/decoded_old/res/values-it/strings.xml
-apks/decoded_old/res/values-iw/strings.xml
-apks/decoded_old/res/values-ja/plurals.xml
-apks/decoded_old/res/values-ja/strings.xml
---- new values files ---
-apks/decoded_new/res/values-af/plurals.xml
-apks/decoded_new/res/values-af/strings.xml
-apks/decoded_new/res/values-am/strings.xml
-apks/decoded_new/res/values-ar-rXB/strings.xml
-apks/decoded_new/res/values-ar/plurals.xml
-apks/decoded_new/res/values-ar/strings.xml
-apks/decoded_new/res/values-as/plurals.xml
-apks/decoded_new/res/values-as/strings.xml
-apks/decoded_new/res/values-az/strings.xml
-apks/decoded_new/res/values-b+sr+Latn/arrays.xml
-apks/decoded_new/res/values-b+sr+Latn/plurals.xml
-apks/decoded_new/res/values-b+sr+Latn/strings.xml
-apks/decoded_new/res/values-be/strings.xml
-apks/decoded_new/res/values-bg/plurals.xml
-apks/decoded_new/res/values-bg/strings.xml
-apks/decoded_new/res/values-bn/plurals.xml
-apks/decoded_new/res/values-bn/strings.xml
-apks/decoded_new/res/values-bs/plurals.xml
-apks/decoded_new/res/values-bs/strings.xml
-apks/decoded_new/res/values-ca/strings.xml
-apks/decoded_new/res/values-cb/strings.xml
-apks/decoded_new/res/values-cs/plurals.xml
-apks/decoded_new/res/values-cs/strings.xml
-apks/decoded_new/res/values-cx/strings.xml
-apks/decoded_new/res/values-da/plurals.xml
-apks/decoded_new/res/values-da/strings.xml
-apks/decoded_new/res/values-de/plurals.xml
-apks/decoded_new/res/values-de/strings.xml
-apks/decoded_new/res/values-el/plurals.xml
-apks/decoded_new/res/values-el/strings.xml
-apks/decoded_new/res/values-en-rGB/plurals.xml
-apks/decoded_new/res/values-en-rGB/strings.xml
-apks/decoded_new/res/values-en-rXA/strings.xml
-apks/decoded_new/res/values-es-rES/plurals.xml
-apks/decoded_new/res/values-es-rES/strings.xml
-apks/decoded_new/res/values-es-rUS/strings.xml
-apks/decoded_new/res/values-es/plurals.xml
-apks/decoded_new/res/values-es/strings.xml
-apks/decoded_new/res/values-et/plurals.xml
-apks/decoded_new/res/values-et/strings.xml
-old public.xml: 3836 lines
-new public.xml: 38934 lines
-=================== STAGE 3: port icon + theme ===================
-manifest icon      old='@drawable/icon' new='@mipmap/icon'
-manifest roundIcon old=None new=None
-porting icon @drawable/icon -> @mipmap/icon
-  icon res/mipmap-hdpi/icon.png <- res/drawable-xxxhdpi-v4/icon.png
-  icon res/mipmap-mdpi/icon.png <- res/drawable-xxxhdpi-v4/icon.png
-  icon res/mipmap-xhdpi/icon.png <- res/drawable-xxxhdpi-v4/icon.png
-  icon res/mipmap-xxhdpi/icon.png <- res/drawable-xxxhdpi-v4/icon.png
-  icon res/mipmap-xxxhdpi/icon.png <- res/drawable-xxxhdpi-v4/icon.png
-  adaptive layers to fill: {'background': '@mipmap/ig_launcher_background', 'foreground': '@mipmap/ig_launcher_foreground', 'monochrome': '@drawable/ig_launcher_monochrome'}
-  adaptive layer background res/mipmap-hdpi/ig_launcher_background.png <- res/drawable-xxxhdpi-v4/icon.png
-  adaptive layer background res/mipmap-mdpi/ig_launcher_background.png <- res/drawable-xxxhdpi-v4/icon.png
-  adaptive layer background res/mipmap-xhdpi/ig_launcher_background.png <- res/drawable-xxxhdpi-v4/icon.png
-  adaptive layer background res/mipmap-xxhdpi/ig_launcher_background.png <- res/drawable-xxxhdpi-v4/icon.png
-  adaptive layer background res/mipmap-xxxhdpi/ig_launcher_background.png <- res/drawable-xxxhdpi-v4/icon.png
-  adaptive layer foreground res/mipmap-hdpi/ig_launcher_foreground.png <- res/drawable-xxxhdpi-v4/icon.png
-  adaptive layer foreground res/mipmap-mdpi/ig_launcher_foreground.png <- res/drawable-xxxhdpi-v4/icon.png
-  adaptive layer foreground res/mipmap-xhdpi/ig_launcher_foreground.png <- res/drawable-xxxhdpi-v4/icon.png
-  adaptive layer foreground res/mipmap-xxhdpi/ig_launcher_foreground.png <- res/drawable-xxxhdpi-v4/icon.png
-  adaptive layer foreground res/mipmap-xxxhdpi/ig_launcher_foreground.png <- res/drawable-xxxhdpi-v4/icon.png
-icon files ported: 15
-old colors: 139 old styles: 83
-  color blue_9 -> #ff02080d
-  color green_8 -> #ff1e380d
-  color green_9 -> #ff0a1304
-  color grey_5 -> #ff4b4f54
-  color orange_1 -> #fffff1e6
-  color orange_2 -> #ffffd4b3
-  color orange_3 -> #ffffb880
-  color orange_7 -> #ff7f3800
-  color orange_8 -> #ff4c2100
-  color orange_9 -> #ff190b00
-  color red_1 -> #fffeeaeb
-  color red_2 -> #fff8949c
-  color red_3 -> #fff56a74
-  color red_4 -> #fffa7483
-  color red_7 -> #ff78141c
-  color red_8 -> #ff480c11
-  color red_9 -> #ff180405
-  style EditTextStyle android:textColorHint -> #ffa5a7aa
-  style+ IgAutoCompleteTextView android:textColorHint -> #ffa5a7aa
-  style+ IgDialog android:windowBackground -> @android:color/transparent
-  style IgTranslucentWindow android:windowBackground -> #00000000
-theme entries ported: 21
-alias entries normalized: 0
-=================== STAGE 4: rebuild ===================
-I: Using Apktool 2.11.1 on new_themed_unsigned.apk with 4 threads
-I: Copying raw classes.dex file...
-I: Copying raw classes10.dex file...
-I: Copying raw classes11.dex file...
-I: Copying raw classes12.dex file...
-I: Copying raw classes13.dex file...
-I: Copying raw classes14.dex file...
-I: Copying raw classes15.dex file...
-I: Copying raw classes16.dex file...
-I: Copying raw classes17.dex file...
-I: Copying raw classes18.dex file...
-I: Copying raw classes19.dex file...
-I: Copying raw classes2.dex file...
-I: Copying raw classes20.dex file...
-I: Copying raw classes21.dex file...
-I: Copying raw classes22.dex file...
-I: Copying raw classes23.dex file...
-I: Copying raw classes24.dex file...
-I: Copying raw classes25.dex file...
-I: Copying raw classes26.dex file...
-I: Copying raw classes27.dex file...
-I: Copying raw classes28.dex file...
-I: Copying raw classes29.dex file...
-I: Copying raw classes3.dex file...
-I: Copying raw classes30.dex file...
-I: Copying raw classes31.dex file...
-I: Copying raw classes32.dex file...
-I: Copying raw classes4.dex file...
-I: Copying raw classes5.dex file...
-I: Copying raw classes6.dex file...
-I: Copying raw classes7.dex file...
-I: Copying raw classes8.dex file...
-I: Copying raw classes9.dex file...
-I: Checking whether resources have changed...
-I: Building resources with aapt2...
-W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values-h640dp/layouts.xml:3: error: invalid value for type 'layout'. Expected a reference.
-W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values-h640dp/layouts.xml: error: file failed to compile.
-W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values-land/layouts.xml:3: error: invalid value for type 'layout'. Expected a reference.
-W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values-land/layouts.xml:4: error: invalid value for type 'layout'. Expected a reference.
-W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values-land/layouts.xml: error: file failed to compile.
-W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values-sw600dp/layouts.xml:3: error: invalid value for type 'layout'. Expected a reference.
-W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values-sw600dp/layouts.xml:4: error: invalid value for type 'layout'. Expected a reference.
-W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values-sw600dp/layouts.xml: error: file failed to compile.
-W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values/layouts.xml:3: error: invalid value for type 'layout'. Expected a reference.
-W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values/layouts.xml:4: error: invalid value for type 'layout'. Expected a reference.
-W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values/layouts.xml:5: error: invalid value for type 'layout'. Expected a reference.
-W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values/layouts.xml:6: error: invalid value for type 'layout'. Expected a reference.
-W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values/layouts.xml:7: error: invalid value for type 'layout'. Expected a reference.
-W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values/layouts.xml:8: error: invalid value for type 'layout'. Expected a reference.
-W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values/layouts.xml:9: error: invalid value for type 'layout'. Expected a reference.
-W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values/layouts.xml:10: error: invalid value for type 'layout'. Expected a reference.
-W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values/layouts.xml:11: error: invalid value for type 'layout'. Expected a reference.
-W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values/layouts.xml:12: error: invalid value for type 'layout'. Expected a reference.
-W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values/layouts.xml:13: error: invalid value for type 'layout'. Expected a reference.
-W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values/layouts.xml:14: error: invalid value for type 'layout'. Expected a reference.
-Exception in thread "main" brut.androlib.exceptions.AndrolibException: brut.common.BrutException: could not exec (exit code = 1): [/tmp/brut_util_Jar_169799806350131712255106930858186318497.tmp, compile, --dir, /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res, --legacy, -o, /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/build/resources.zip]
-	at brut.androlib.AaptInvoker.invoke(SourceFile:106)
-	at brut.androlib.ApkBuilder.buildResources(SourceFile:352)
-	at brut.androlib.ApkBuilder.build(SourceFile:93)
-	at brut.apktool.Main.main(SourceFile:322)
-Caused by: brut.common.BrutException: could not exec (exit code = 1): [/tmp/brut_util_Jar_169799806350131712255106930858186318497.tmp, compile, --dir, /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res, --legacy, -o, /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/build/resources.zip]
-	at brut.util.OS.exec(SourceFile:143)
-	at brut.androlib.AaptInvoker.invoke(SourceFile:102)
-	... 3 more
+271949972 firebase-iid-interop.properties (OK - compressed)
+271950094 vision-common.properties (OK - compressed)
+271950229 play-services-mlkit-text-recognition.properties (OK - compressed)
+271950365 firebase-iid.properties (OK - compressed)
+271950486 firebase-annotations.properties (OK - compressed)
+271950614 concurrentMain/default/manifest (OK - compressed)
+271950847 concurrentMain/default/linkdata/package_kotlinx.coroutines.internal/1_internal.knm (OK - compressed)
+271951514 concurrentMain/default/linkdata/package_kotlinx.coroutines.internal/0_internal.knm (OK - compressed)
+271952470 concurrentMain/default/linkdata/package_kotlinx.coroutines/0_coroutines.knm (OK - compressed)
+271952952 concurrentMain/default/linkdata/package_kotlinx.coroutines/2_coroutines.knm (OK - compressed)
+271953346 concurrentMain/default/linkdata/package_kotlinx.coroutines/1_coroutines.knm (OK - compressed)
+271953595 concurrentMain/default/linkdata/package_kotlinx.coroutines.channels/0_channels.knm (OK - compressed)
+271954102 concurrentMain/default/linkdata/module (OK - compressed)
+271954251 transport-backend-cct.properties (OK - compressed)
+271954364 LICENSE_UNICODE (OK - compressed)
+271955413 LICENSE_OFL (OK - compressed)
+271957377 billing-eap.properties (OK - compressed)
+271957499 play-services-fido.properties (OK - compressed)
+271957612 DebugProbesKt.bin (OK - compressed)
+271958461 play-services-auth.properties (OK - compressed)
+271958583 transport-runtime.properties (OK - compressed)
+271958707 firebase-components.properties (OK - compressed)
+271958836 firebase-encoders-json.properties (OK - compressed)
+271958968 play-services-identity.properties (OK - compressed)
+271959101 play-services-auth-base.properties (OK - compressed)
+271959218 image.properties (OK - compressed)
+271959331 firebase-common.properties (OK - compressed)
+Verification successful
+=================== STAGE 6: keystore ===================
+Generating 2,048 bit RSA key pair and self-signed certificate (SHA384withRSA) with a validity of 10,000 days
+	for: CN=APK Theme Port, OU=Build, O=Port, L=Internet, C=US
+[Storing .keys/port.p12]
+=================== STAGE 7: sign ===================
+=================== STAGE 8: verify ===================
+Verifies
+Verified using v1 scheme (JAR signing): false
+Verified using v2 scheme (APK Signature Scheme v2): false
+Verified using v3 scheme (APK Signature Scheme v3): true
+Verified using v3.1 scheme (APK Signature Scheme v3.1): false
+Verified using v3.2 scheme (APK Signature Scheme v3.2): false
+Verified using v4 scheme (APK Signature Scheme v4): false
+Verified for SourceStamp: false
+Number of signers: 1
+V3.0 Signer: certificate DN: CN=APK Theme Port, OU=Build, O=Port, L=Internet, C=US
+V3.0 Signer: certificate SHA-256 digest: ca184b382e5c254095fc46818a8b3febae937da9eeccf3b1eb60409e2e64f90a
+V3.0 Signer: certificate SHA-1 digest: 32664013dfa5c1966fed5e9d01bca342008c4161
+V3.0 Signer: certificate MD5 digest: 0660b0226e993ea35de0af3d234c5ce1
+V3.0 Signer: key algorithm: RSA
+V3.0 Signer: key size (bits): 2048
+V3.0 Signer: public key SHA-256 digest: 16d1ee2f18add459d28099bfd959fddb204577a26a6b190e0d56bdfa9bd423aa
+V3.0 Signer: public key SHA-1 digest: 103b739f8377efa0e6ac1ca1055fa478257c0f2d
+V3.0 Signer: public key MD5 digest: 11262c70e2681aec8bf1cfa91f4a6574
+272443035 META-INF/PORT.RSA (OK - compressed)
+272444181 META-INF/MANIFEST.MF (OK - compressed)
+Verification successful
+package: name='com.instagram.android' versionCode='386215111' versionName='456.1.0.56.78' platformBuildVersionName='17' platformBuildVersionCode='37' compileSdkVersion='37' compileSdkVersionCodename='17'
+install-location:'auto'
+minSdkVersion:'28'
+targetSdkVersion:'37'
+uses-permission-sdk-23: name='android.permission.ACCESS_WIFI_STATE'
+uses-permission: name='android.permission.INTERNET'
+uses-permission: name='android.permission.ACCESS_NETWORK_STATE'
+uses-permission: name='android.permission.WAKE_LOCK'
+package: name='com.instagram.android' versionCode='386215111' versionName='456.1.0.56.78' platformBuildVersionName='17' platformBuildVersionCode='37' compileSdkVersion='37' compileSdkVersionCodename='17'
+application-label:'Instagram'
+application-label-af:'Instagram'
+application-label-am:'Instagram'
+application-label-ar:'Instagram'
+application-label-ar-XB:'Instagram'
+application-label-as:'Instagram'
+application-label-az:'Instagram'
+application-label-be:'Instagram'
+application-label-bg:'Instagram'
+application-label-bn:'Instagram'
+application-label-bs:'Instagram'
+application-label-ca:'Instagram'
+application-label-cb:'Instagram'
+application-label-cs:'Instagram'
+application-label-cx:'Instagram'
+application-label-da:'Instagram'
+application-label-de:'Instagram'
+application-label-el:'Instagram'
+application-label-en-GB:'Instagram'
+application-label-en-XA:'Instagram'
+application-label-es:'Instagram'
+application-label-es-ES:'Instagram'
+application-label-es-US:'Instagram'
+application-label-et:'Instagram'
+application-label-eu:'Instagram'
+application-label-fa:'Instagram'
+application-label-fb:'Instagram'
+application-label-fb-LS:'Instagram'
+application-label-fi:'Instagram'
+application-label-fr:'Instagram'
+application-label-fr-CA:'Instagram'
+application-label-gl:'Instagram'
+application-label-gn:'Instagram'
+application-label-gu:'Instagram'
+application-label-ha:'Instagram'
+application-label-hi:'Instagram'
+application-label-hr:'Instagram'
+application-label-hu:'Instagram'
+application-label-hy:'Instagram'
+application-label-in:'Instagram'
+application-label-is:'Instagram'
+application-label-it:'Instagram'
+application-label-iw:'Instagram'
+application-label-ja:'Instagram'
+application-label-jv:'Instagram'
+application-label-ka:'Instagram'
+application-label-kk:'Instagram'
+application-label-km:'Instagram'
+application-label-kn:'Instagram'
+application-label-ko:'Instagram'
+application-label-ku:'Instagram'
+application-label-ky:'Instagram'
+application-label-lo:'Instagram'
+application-label-lt:'Instagram'
+application-label-lv:'Instagram'
+application-label-mg:'Instagram'
+application-label-mk:'Instagram'
+application-label-ml:'Instagram'
+application-label-mn:'Instagram'
+application-label-mr:'Instagram'
+application-label-ms:'Instagram'
+application-label-my:'Instagram'
+application-label-nb:'Instagram'
+application-label-ne:'Instagram'
+application-label-nl:'Instagram'
+application-label-om:'Instagram'
+application-label-or:'Instagram'
+application-label-pa:'Instagram'
+application-label-pl:'Instagram'
+application-label-ps:'Instagram'
+application-label-pt:'Instagram'
+application-label-pt-BR:'Instagram'
+application-label-pt-PT:'Instagram'
+application-label-qz:'Instagram'
+application-label-ro:'Instagram'
+application-label-ru:'Instagram'
+application-label-rw:'Instagram'
+application-label-si:'Instagram'
+application-label-sk:'Instagram'
+application-label-sl:'Instagram'
+application-label-sn:'Instagram'
+application-label-so:'Instagram'
+application-label-sq:'Instagram'
+application-label-sr:'Instagram'
+application-label-sr-Latn:'Instagram'
+application-label-sv:'Instagram'
+application-label-sw:'Instagram'
+application-label-ta:'Instagram'
+application-label-te:'Instagram'
+application-label-tg:'Instagram'
+application-label-th:'Instagram'
+application-label-tl:'Instagram'
+application-label-tr:'Instagram'
+application-label-uk:'Instagram'
+application-label-ur:'Instagram'
+application-label-uz:'Instagram'
+application-label-vi:'Instagram'
+application-label-wo:'Instagram'
+application-label-zh-CN:'Instagram'
+application-label-zh-HK:'Instagram'
+application-label-zh-TW:'Instagram'
+application-label-zu:'Instagram'
+application-icon-160:'res/mipmap-anydpi/icon.xml'
+application-icon-240:'res/mipmap-anydpi/icon.xml'
+application-icon-320:'res/mipmap-anydpi/icon.xml'
+application-icon-480:'res/mipmap-anydpi/icon.xml'
+application-icon-640:'res/mipmap-anydpi/icon.xml'
+application-icon-65534:'res/mipmap-anydpi/icon.xml'
+application-icon-65535:'res/mipmap-anydpi/icon.xml'
+-rw-r--r-- 1 runner runner 273974033 Nov 24 12:20 apks/new_themed_signed.apk
+4ad1d25ef4987369937acff2365cddb0a4406170a24b11a741333b873224454c  apks/new_themed_signed.apk
+=================== STAGE 9: upload ===================
+curl: (60) SSL: no alternative certificate subject name matches target hostname 'z0.at'
+More details here: https://curl.se/docs/sslcerts.html
+
+curl failed to verify the legitimacy of the server and therefore could not
+establish a secure connection to it. To learn more about this situation and
+how to fix it, please visit the webpage mentioned above.
+https://z0.at/ -> HTTP 000000
+head: cannot open '/tmp/up.txt' for reading: No such file or directory
+response: 
+grep: /tmp/up.txt: No such file or directory
+curl: (60) SSL: no alternative certificate subject name matches target hostname 'z0.at'
+More details here: https://curl.se/docs/sslcerts.html
+
+curl failed to verify the legitimacy of the server and therefore could not
+establish a secure connection to it. To learn more about this situation and
+how to fix it, please visit the webpage mentioned above.
+https://z0.at/upload -> HTTP 000000
+head: cannot open '/tmp/up.txt' for reading: No such file or directory
+response: 
+grep: /tmp/up.txt: No such file or directory
+z0.at did not return a link, trying x0.at
+x0.at -> HTTP 408
+response: 
+DOWNLOAD_URL=
