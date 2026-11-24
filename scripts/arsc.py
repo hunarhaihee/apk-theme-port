@@ -12,7 +12,9 @@ RES_TABLE_PACKAGE = 0x0200
 RES_TABLE_TYPE = 0x0201
 
 TYPE_REFERENCE = 0x01
-COLOR_TYPES = (0x1C, 0x1D)  # ARGB8, RGB8
+TYPE_INT_COLOR_ARGB8 = 0x1C
+TYPE_INT_COLOR_RGB8 = 0x1D
+COLOR_TYPES = (TYPE_INT_COLOR_ARGB8, TYPE_INT_COLOR_RGB8)
 
 
 def normalize_hex(hex_value):
@@ -139,16 +141,17 @@ def read_value(data, voff):
 
 
 def write_color(data, voff, hex_value):
-    """Write a colour into a Res_value, keeping the 8-byte size."""
+    """Write an opaque ARGB8 colour into a Res_value, keeping the 8-byte size.
+
+    The source entries use several value types (ARGB8 / RGB8), and RGB8 has no
+    alpha channel, which shows up as fully transparent (#00RRGGBB) when dumped.
+    Palette colours are meant to be visible, so always emit ARGB8 with alpha FF.
+    """
     value_str = normalize_hex(hex_value)
     value = int(value_str[1:], 16)
     if len(value_str) == 7:
-        dtype = 0x1D if data[voff + 3] == 0x1D else 0x1C
-        if dtype == 0x1C:
-            value |= 0xFF000000
-    else:
-        dtype = 0x1C
-    data[voff + 3] = dtype
+        value |= 0xFF000000
+    data[voff + 3] = TYPE_INT_COLOR_ARGB8
     struct.pack_into("<I", data, voff + 4, value)
 
 
