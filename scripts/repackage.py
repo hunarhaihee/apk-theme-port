@@ -145,21 +145,48 @@ def encode(im, original_bytes):
 
 
 def make_icon_replacement(original_bytes, kind, src, bg):
+    """Old artwork as the adaptive background (full bleed) + empty foreground.
+
+    The old icon is a full-bleed square, so letting the launcher mask the
+    background layer reproduces it best; an inset foreground would show it small
+    on a coloured plate instead.
+    """
     im = Image.open(io.BytesIO(original_bytes)).convert("RGBA")
     w, h = im.size
     if kind == "icon":
         art = src.resize((w, h), Image.LANCZOS)
         return encode(art, original_bytes), (w, h)
     if kind == "foreground":
-        inner = (max(1, int(w * 0.72)), max(1, int(h * 0.72)))
-        art = src.resize(inner, Image.LANCZOS)
-        canvas = Image.new("RGBA", (w, h), (0, 0, 0, 0))
-        canvas.paste(art, ((w - inner[0]) // 2, (h - inner[1]) // 2), art)
-        return encode(canvas, original_bytes), (w, h)
+        return encode(Image.new("RGBA", (w, h), (0, 0, 0, 0)), original_bytes), (w, h)
     if kind == "background":
-        solid = Image.new("RGBA", (w, h), bg)
-        return encode(solid, original_bytes), (w, h)
+        square = src
+        side = max(src.size)
+        if src.size != (side, side):
+            square = Image.new("RGBA", (side, side), bg)
+            square.paste(src, ((side - src.width) // 2, (side - src.height) // 2), src)
+        art = square.resize((w, h), Image.LANCZOS)
+        return encode(art, original_bytes), (w, h)
     raise ValueError(kind)
+
+
+def write_preview(src, legacy, fg, bg):
+    tiles = []
+    for label, im in (("old", src), ("legacy", legacy), ("background", bg), ("foreground", fg)):
+        if im is None:
+            continue
+        tile = im.convert("RGBA")
+        tile.thumbnail((192, 192), Image.LANCZOS)
+        canvas = Image.new("RGBA", (192, 192), (40, 40, 40, 255))
+        canvas.paste(tile, ((192 - tile.width) // 2, (192 - tile.height) // 2), tile)
+        tiles.append((label, canvas))
+    if not tiles:
+        return
+    sheet = Image.new("RGBA", (192 * len(tiles), 192), (40, 40, 40, 255))
+    for i, (_label, canvas) in enumerate(tiles):
+        sheet.paste(canvas, (192 * i, 0))
+    os.makedirs("report", exist_ok=True)
+    sheet.save(os.path.join("report", "icon-preview.png"))
+    log("icon preview tiles:", [t[0] for t in tiles])
 
 
 # --------------------------------------------------------------------------- main
@@ -218,12 +245,15 @@ def main():
     names = set(zin.namelist())
 
     replacements = {}
+    preview = {"legacy": None, "foreground": None, "background": None}
     for resname, kind in ICON_RESOURCES:
         entries = fmap.get(resname, [])
         log("resource", resname, "->", entries)
         if not entries:
             log("  [warn] not found in resource table")
             continue
+        best = None
+        best_area = -1
         for cfg, path in entries:
             if not path.lower().endswith((".png", ".webp", ".jpg", ".jpeg")):
                 log("  skip non-image", cfg, path)
@@ -238,6 +268,10 @@ def main():
                 continue
             replacements[path] = data
             log("  replaced", path, "(%s, %sx%s)" % (cfg, size[0], size[1]))
+            if size[0] * size[1] > best_area:
+                best_area = size[0] * size[1]
+                best = Image.open(io.BytesIO(data)).convert("RGBA")
+        preview[kind] = best
 
     removed = []
     patched_colors = 0
@@ -275,12 +309,14 @@ def main():
     log("arsc colour values patched:", patched_colors)
     log("signature files dropped:", removed)
 
+    write_preview(src, preview.get("legacy"), preview.get("foreground"), preview.get("background"))
+
     with open(os.path.join("report", "replaced.json"), "w") as fh:
         json.dump(
             {
                 "replaced": sorted(replacements),
                 "removed": removed,
-                "colors": {k: v for k, v in changed.items()},
+                "colors": changed,
                 "patched_color_values": patched_colors,
             },
             fh,

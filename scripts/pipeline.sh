@@ -39,7 +39,6 @@ for f in apks/old.apk apks/new.apk; do
   fi
   unzip -l "$f" | grep -q 'AndroidManifest.xml' && echo "$f: manifest present"
   sha256sum "$f"
-  echo "$f: $(unzip -l "$f" | tail -1)"
 done
 
 echo "=================== STAGE 2: apktool decode (inspection) ==================="
@@ -47,16 +46,14 @@ $APKTOOL --version
 $APKTOOL d -f -s -o apks/decoded_old apks/old.apk
 $APKTOOL d -f -s -o apks/decoded_new apks/new.apk
 
-echo "=================== STAGE 2b: diagnostics ==================="
-bash scripts/diag.sh || true
-
-echo "=================== STAGE 3: analysis (what would be ported) ==================="
-python3 scripts/port.py || true
-
-echo "=================== STAGE 4: repackage (icon + palette) ==================="
+echo "=================== STAGE 3: repackage (icon + palette) ==================="
 python3 scripts/repackage.py --apk apks/new.apk --old apks/decoded_old \
   --new apks/decoded_new --out apks/new_themed_unsigned.apk
 unzip -t apks/new_themed_unsigned.apk > /dev/null && echo "unsigned zip OK"
+
+echo "=================== STAGE 3b: analysis + diagnostics ==================="
+bash scripts/diag.sh || true
+python3 scripts/port.py || true
 
 echo "=================== STAGE 5: zipalign ==================="
 zipalign -p -f -v 4 apks/new_themed_unsigned.apk apks/new_themed_aligned.apk
@@ -79,13 +76,9 @@ apksigner verify --verbose --print-certs apks/new_themed_signed.apk
 zipalign -c -v 4 apks/new_themed_signed.apk | tail -3
 unzip -t apks/new_themed_signed.apk > /dev/null && echo "signed zip OK"
 echo "--- badging: original ---"
-aapt2 dump badging apks/new.apk | head -6
+aapt2 dump badging apks/new.apk | head -4
 echo "--- badging: themed ---"
-aapt2 dump badging apks/new_themed_signed.apk | head -6
-echo "--- icon resources: original ---"
-aapt2 dump resources apks/new.apk | grep -A6 'mipmap/icon$' | head -12 || true
-echo "--- icon resources: themed ---"
-aapt2 dump resources apks/new_themed_signed.apk | grep -A6 'mipmap/icon$' | head -12 || true
+aapt2 dump badging apks/new_themed_signed.apk | head -4
 echo "--- palette check: original ---"
 aapt2 dump resources apks/new.apk | grep -A1 -E 'color/(blue_9|orange_1|grey_5)$' | head -12 || true
 echo "--- palette check: themed ---"

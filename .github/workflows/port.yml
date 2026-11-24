@@ -84,7 +84,7 @@ jobs:
         if: always()
         run: |
           mkdir -p ci
-          for f in report/*.txt report/*.log; do
+          for f in report/*.txt report/*.log report/*.png; do
             if [ -f "$f" ]; then cp "$f" "ci/$(basename "$f")"; fi
           done
           git config user.name "ci-bot"
@@ -111,4 +111,4 @@ jobs:
           gh release delete themed-apk --yes --cleanup-tag 2>/dev/null || true
           gh release create themed-apk apks/new_themed_signed.apk \
             --title "Themed APK (old icon + theme, new features)" \
-            --notes "Signed with a freshly generated key. Uninstall the stock app first (signature differs)."
+            --notes "Signed with a freshly generated key. Uninstall the stock Instagram app first (signature differs)."

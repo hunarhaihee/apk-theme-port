@@ -10,6 +10,17 @@ import os
 import sys
 import zipfile
 
+SIG_EXT = (".SF", ".RSA", ".DSA", ".EC", "MANIFEST.MF")
+
+
+def is_signature(name):
+    base = name.rsplit("/", 1)[-1].upper()
+    return name.startswith("META-INF/") and base.endswith(SIG_EXT)
+
+
+def is_stamp(name):
+    return name.startswith("stamp-cert") or name.endswith("stamp-cert-sha256")
+
 
 def main():
     orig_path, out_path = sys.argv[1], sys.argv[2]
@@ -24,11 +35,16 @@ def main():
 
     problems = []
     changed = []
+    dropped = []
 
     for name in sorted(a_map):
+        if is_signature(name) or is_stamp(name):
+            if name not in b_map:
+                dropped.append(name)
+            continue
         if name in allowed_removed:
             if name in b_map:
-                problems.append("signature file still present: " + name)
+                problems.append("file that should be dropped is present: " + name)
             continue
         if name not in b_map:
             problems.append("file missing from output: " + name)
@@ -41,9 +57,14 @@ def main():
             continue
         problems.append("unexpected change: %s (%d -> %d bytes)" % (name, ia.file_size, ib.file_size))
 
+    added = []
     for name in sorted(b_map):
-        if name not in a_map:
-            problems.append("unexpected new file: " + name)
+        if name in a_map:
+            continue
+        if is_signature(name):
+            added.append(name)
+            continue
+        problems.append("unexpected new file: " + name)
 
     dexes = [n for n in a_map if n.startswith("classes") and n.endswith(".dex")]
     libs = [n for n in a_map if n.startswith("lib/")]
@@ -59,7 +80,8 @@ def main():
         "native libs identical:  %d/%d" % (same_lib, len(libs)),
         "assets identical:       %d/%d" % (same_assets, len(assets)),
         "changed on purpose:     %s" % (", ".join(changed) if changed else "none"),
-        "removed signatures:     %s" % (", ".join(sorted(allowed_removed)) if allowed_removed else "none"),
+        "dropped old signature:  %s" % (", ".join(sorted(dropped)) if dropped else "none"),
+        "added new signature:    %s" % (", ".join(sorted(added)) if added else "none"),
         "problems:               %d" % len(problems),
     ]
     lines.extend("  !! " + p for p in problems[:40])
@@ -71,7 +93,7 @@ def main():
     if problems:
         print("\nFAIL: output differs from the original APK outside the allowed set", file=sys.stderr)
         return 1
-    print("\nOK: output differs only in the icon bitmaps and resources.arsc")
+    print("\nOK: only icon bitmaps + resources.arsc differ; code, libs and assets are untouched")
     return 0
 
 
