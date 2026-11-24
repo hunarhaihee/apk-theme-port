@@ -1,5 +1,6 @@
 EXIT CODE: 0
 ---------------- last 200 log lines ----------------
+265102843 res/zxy.xml (OK - compressed)
 265103066 res/zxz.xml (OK - compressed)
 265103333 res/zy-.xml (OK - compressed)
 265103595 res/zy0.xml (OK - compressed)
@@ -117,16 +118,16 @@ Verified using v4 scheme (APK Signature Scheme v4): false
 Verified for SourceStamp: false
 Number of signers: 1
 V3.0 Signer: certificate DN: CN=APK Theme Port, OU=Build, O=Port, L=Internet, C=US
-V3.0 Signer: certificate SHA-256 digest: 8627b57ac2302c90234701fc47dcc5f13fcd09d31f1b63396e231786d2bf24ed
-V3.0 Signer: certificate SHA-1 digest: 48b6c1b50f9beeb4ab5a8d4908f720e7e704c4a5
-V3.0 Signer: certificate MD5 digest: eca3408baed7a2c20ebed4f28d734790
+V3.0 Signer: certificate SHA-256 digest: c6670078ad95edfb38408398c37b43c582d478269c541bc82ba6843cc5931a06
+V3.0 Signer: certificate SHA-1 digest: a5598c08bcbf5b4514f11f7aa36d7315431f4b20
+V3.0 Signer: certificate MD5 digest: 68c5cf6d5e346c853b2cd49289e0443f
 V3.0 Signer: key algorithm: RSA
 V3.0 Signer: key size (bits): 2048
-V3.0 Signer: public key SHA-256 digest: 0112a0bdd7c6fc30d6a7d56b79b2b3f8e444e6188f3d645bc7125217188be550
-V3.0 Signer: public key SHA-1 digest: 56435e210797f38735a76a1717b10811eae7cf6a
-V3.0 Signer: public key MD5 digest: 31d0ecd43962606f07514359358028b9
+V3.0 Signer: public key SHA-256 digest: 49c267b40963d3422e15fe1dc6b57c119c680f02726500e4215fbbcca0ee6861
+V3.0 Signer: public key SHA-1 digest: 681848648211af915d05111edacc851fb4e60267
+V3.0 Signer: public key MD5 digest: 228d8997098a21c7b94e687aa5e959cd
 271832862 META-INF/PORT.RSA (OK - compressed)
-271834010 META-INF/MANIFEST.MF (OK - compressed)
+271834014 META-INF/MANIFEST.MF (OK - compressed)
 Verification successful
 signed zip OK
 --- badging: original ---
@@ -175,8 +176,8 @@ added new signature:    META-INF/MANIFEST.MF, META-INF/PORT.RSA, META-INF/PORT.S
 problems:               0
 
 OK: only icon bitmaps + resources.arsc differ; code, libs and assets are untouched
--rw-r--r-- 1 runner runner 273119020 Nov 24 13:01 apks/new_themed_signed.apk
-07e0fd7e2e16d7dc1637553dd5f12dc91a2c78234bbf256bcebdad6a05cb804d  apks/new_themed_signed.apk
+-rw-r--r-- 1 runner runner 273119020 Nov 24 13:19 apks/new_themed_signed.apk
+db57c9220a5ffdccc6430ad76a0883080d5694ade98d67c1e56c1e5e6904f058  apks/new_themed_signed.apk
 =================== STAGE 9: upload ===================
 http://z0.at/ -> HTTP 302
 response: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
@@ -196,7 +197,6 @@ response: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
 </body></html>
 https://0x0.st -> HTTP 503
 response: uploads disabled because it’s been almost nothing but AI botnet spam for the past few months. will be back with a few changes at some point. no ETA.
-curl: (56) OpenSSL SSL_read: OpenSSL/3.5.5: error:0A000126:SSL routines::unexpected eof while reading, errno 0
-https://x0.at/ -> HTTP 000000
-response: uploads disabled because it’s been almost nothing but AI botnet spam for the past few months. will be back with a few changes at some point. no ETA.
+https://x0.at/ -> HTTP 403
+response: 403 Forbidden File type not allowed.
 DOWNLOAD_URL=
