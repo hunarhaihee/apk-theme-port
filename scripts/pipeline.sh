@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
-# Full port pipeline, intended to run on the GitHub Actions runner.
+# Port old icon + palette onto the new Instagram APK.
+#
+# The new APK's resources.arsc cannot be rebuilt by aapt2 (6000 layouts are
+# stored as packed strings), so we preserve the table byte-for-byte and only
+# swap icon bitmaps + patch palette colours in place.
 set -euo pipefail
 
 OLD_ID="${OLD_ID:?}"
@@ -35,9 +39,10 @@ for f in apks/old.apk apks/new.apk; do
   fi
   unzip -l "$f" | grep -q 'AndroidManifest.xml' && echo "$f: manifest present"
   sha256sum "$f"
+  echo "$f: $(unzip -l "$f" | tail -1)"
 done
 
-echo "=================== STAGE 2: apktool decode ==================="
+echo "=================== STAGE 2: apktool decode (inspection) ==================="
 $APKTOOL --version
 $APKTOOL d -f -s -o apks/decoded_old apks/old.apk
 $APKTOOL d -f -s -o apks/decoded_new apks/new.apk
@@ -45,14 +50,13 @@ $APKTOOL d -f -s -o apks/decoded_new apks/new.apk
 echo "=================== STAGE 2b: diagnostics ==================="
 bash scripts/diag.sh || true
 
-echo "=================== STAGE 3: port icon + theme ==================="
-python3 scripts/port.py
+echo "=================== STAGE 3: analysis (what would be ported) ==================="
+python3 scripts/port.py || true
 
-echo "=================== STAGE 4: rebuild ==================="
-if ! $APKTOOL b --use-aapt2 apks/decoded_new -o apks/new_themed_unsigned.apk; then
-  echo "retrying build without --use-aapt2"
-  $APKTOOL b apks/decoded_new -o apks/new_themed_unsigned.apk
-fi
+echo "=================== STAGE 4: repackage (icon + palette) ==================="
+python3 scripts/repackage.py --apk apks/new.apk --old apks/decoded_old \
+  --new apks/decoded_new --out apks/new_themed_unsigned.apk
+unzip -t apks/new_themed_unsigned.apk > /dev/null && echo "unsigned zip OK"
 
 echo "=================== STAGE 5: zipalign ==================="
 zipalign -p -f -v 4 apks/new_themed_unsigned.apk apks/new_themed_aligned.apk
@@ -73,8 +77,21 @@ apksigner sign --ks .keys/port.p12 --ks-key-alias port --ks-pass pass:android \
 echo "=================== STAGE 8: verify ==================="
 apksigner verify --verbose --print-certs apks/new_themed_signed.apk
 zipalign -c -v 4 apks/new_themed_signed.apk | tail -3
-aapt2 dump badging apks/new_themed_signed.apk | head -8
-aapt2 dump badging apks/new_themed_signed.apk | grep -E "application-icon|application-label|package:|sdkVersion" || true
+unzip -t apks/new_themed_signed.apk > /dev/null && echo "signed zip OK"
+echo "--- badging: original ---"
+aapt2 dump badging apks/new.apk | head -6
+echo "--- badging: themed ---"
+aapt2 dump badging apks/new_themed_signed.apk | head -6
+echo "--- icon resources: original ---"
+aapt2 dump resources apks/new.apk | grep -A6 'mipmap/icon$' | head -12 || true
+echo "--- icon resources: themed ---"
+aapt2 dump resources apks/new_themed_signed.apk | grep -A6 'mipmap/icon$' | head -12 || true
+echo "--- palette check: original ---"
+aapt2 dump resources apks/new.apk | grep -A1 -E 'color/(blue_9|orange_1|grey_5)$' | head -12 || true
+echo "--- palette check: themed ---"
+aapt2 dump resources apks/new_themed_signed.apk | grep -A1 -E 'color/(blue_9|orange_1|grey_5)$' | head -12 || true
+echo "--- integrity: only icon + arsc may differ ---"
+python3 scripts/verify.py apks/new.apk apks/new_themed_signed.apk
 ls -l apks/new_themed_signed.apk
 sha256sum apks/new_themed_signed.apk
 
