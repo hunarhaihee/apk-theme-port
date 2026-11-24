@@ -24,16 +24,31 @@ jobs:
           distribution: temurin
           java-version: '17'
 
-      - name: Android SDK / build-tools
-        uses: android-actions/setup-android@v3
-
-      - name: Install build-tools 34
+      - name: Locate Android build-tools
         run: |
-          yes | sdkmanager --licenses > /dev/null 2>&1 || true
-          sdkmanager "build-tools;34.0.0" "platforms;android-34" > /dev/null
-          echo "$ANDROID_HOME/build-tools/34.0.0" >> "$GITHUB_PATH"
+          set -euo pipefail
+          SDK="${ANDROID_SDK_ROOT:-${ANDROID_HOME:-/usr/local/lib/android/sdk}}"
+          echo "SDK=$SDK"
+          ls "$SDK" || true
+          export ANDROID_SDK_ROOT="$SDK" ANDROID_HOME="$SDK"
+          BT=""
+          if [ -d "$SDK/build-tools" ]; then
+            BT="$(ls "$SDK/build-tools" | sort -V | tail -1)"
+          fi
+          if [ -z "$BT" ] || [ ! -x "$SDK/build-tools/$BT/zipalign" ]; then
+            SDKM="$(command -v sdkmanager || true)"
+            [ -n "$SDKM" ] || SDKM="$SDK/cmdline-tools/latest/bin/sdkmanager"
+            echo "sdkmanager: $SDKM"
+            ( yes | "$SDKM" --licenses > /dev/null 2>&1 ) || true
+            ( yes | "$SDKM" "build-tools;34.0.0" > /dev/null 2>&1 ) || true
+            BT="34.0.0"
+          fi
+          echo "build-tools version: $BT"
+          echo "$SDK/build-tools/$BT" >> "$GITHUB_PATH"
+          ls "$SDK/build-tools/$BT" | head -20
+          "$SDK/build-tools/$BT/zipalign" 2>&1 | head -2 || true
           python3 -m pip install --quiet Pillow || python3 -m pip install --quiet --break-system-packages Pillow
-          python3 -c "import PIL, PIL.Image; print('Pillow', PIL.__version__)"
+          python3 -c "import PIL; print('Pillow', PIL.__version__)"
 
       - name: Install apktool (iBotPeaches)
         run: |
@@ -48,6 +63,7 @@ jobs:
       - name: Show port report
         if: always()
         run: |
+          echo '--- port report ---'
           cat report/port-report.txt || true
 
       - name: Upload artifacts
