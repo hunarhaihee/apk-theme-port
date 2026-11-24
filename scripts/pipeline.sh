@@ -41,24 +41,18 @@ echo "=================== STAGE 2: apktool decode ==================="
 $APKTOOL --version
 $APKTOOL d -f -s -o apks/decoded_old apks/old.apk
 $APKTOOL d -f -s -o apks/decoded_new apks/new.apk
-echo "--- old res dirs ---"; ls apks/decoded_old/res | sort | tr '\n' ' '; echo
-echo "--- new res dirs ---"; ls apks/decoded_new/res | sort | tr '\n' ' '; echo
-echo "--- old manifest (head) ---"; head -40 apks/decoded_old/AndroidManifest.xml
-echo "--- new manifest (head) ---"; head -40 apks/decoded_new/AndroidManifest.xml
-echo "--- old icon-ish files ---"
-find apks/decoded_old/res -iname '*launcher*' -o -iname '*icon*' | sort | head -60
-echo "--- new icon-ish files ---"
-find apks/decoded_new/res -iname '*launcher*' -o -iname '*icon*' | sort | head -60
-echo "--- old values files ---"; ls apks/decoded_old/res/values*/*.xml | head -40
-echo "--- new values files ---"; ls apks/decoded_new/res/values*/*.xml | head -40
-if [ -f apks/decoded_old/res/values/public.xml ]; then echo "old public.xml: $(wc -l < apks/decoded_old/res/values/public.xml) lines"; fi
-if [ -f apks/decoded_new/res/values/public.xml ]; then echo "new public.xml: $(wc -l < apks/decoded_new/res/values/public.xml) lines"; fi
+
+echo "=================== STAGE 2b: diagnostics ==================="
+bash scripts/diag.sh || true
 
 echo "=================== STAGE 3: port icon + theme ==================="
 python3 scripts/port.py
 
 echo "=================== STAGE 4: rebuild ==================="
-$APKTOOL b --use-aapt2 apks/decoded_new -o apks/new_themed_unsigned.apk
+if ! $APKTOOL b --use-aapt2 apks/decoded_new -o apks/new_themed_unsigned.apk; then
+  echo "retrying build without --use-aapt2"
+  $APKTOOL b apks/decoded_new -o apks/new_themed_unsigned.apk
+fi
 
 echo "=================== STAGE 5: zipalign ==================="
 zipalign -p -f -v 4 apks/new_themed_unsigned.apk apks/new_themed_aligned.apk
@@ -106,3 +100,13 @@ if [ -z "$UP_URL" ]; then
   fi
 fi
 echo "DOWNLOAD_URL=$UP_URL" | tee report/download-url.txt
+
+if [ -n "${GITHUB_STEP_SUMMARY:-}" ]; then
+  {
+    echo "## Theme port result"
+    echo ""
+    echo "* Size: $(stat -c%s apks/new_themed_signed.apk) bytes"
+    echo "* SHA256: $(sha256sum apks/new_themed_signed.apk | cut -d' ' -f1)"
+    echo "* Upload URL: ${UP_URL:-none}"
+  } >> "$GITHUB_STEP_SUMMARY"
+fi

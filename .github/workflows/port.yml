@@ -22,7 +22,7 @@ jobs:
       - uses: actions/setup-java@v4
         with:
           distribution: temurin
-          java-version: '17'
+          java-version: '21'
 
       - name: Locate Android build-tools
         run: |
@@ -45,11 +45,24 @@ jobs:
           python3 -m pip install --quiet Pillow || python3 -m pip install --quiet --break-system-packages Pillow
           python3 -c "import PIL; print('Pillow', PIL.__version__)"
 
-      - name: Install apktool (iBotPeaches)
+      - name: Install apktool (iBotPeaches, latest release)
         run: |
           mkdir -p tools
-          curl -fsSL --retry 3 -o tools/apktool.jar \
-            https://github.com/iBotPeaches/Apktool/releases/download/v2.11.1/apktool_2.11.1.jar
+          TAG="$(curl -fsSL --retry 3 https://api.github.com/repos/iBotPeaches/Apktool/releases/latest \
+            | python3 -c 'import json,sys; print(json.load(sys.stdin)["tag_name"])' 2>/dev/null || true)"
+          echo "latest apktool tag: ${TAG:-unknown}"
+          ok=0
+          if [ -n "${TAG:-}" ]; then
+            VER="${TAG#v}"
+            if curl -fsSL --retry 3 -o tools/apktool.jar \
+              "https://github.com/iBotPeaches/Apktool/releases/download/${TAG}/apktool_${VER}.jar"; then
+              ok=1
+            fi
+          fi
+          if [ "$ok" -ne 1 ]; then
+            curl -fsSL --retry 3 -o tools/apktool.jar \
+              https://github.com/iBotPeaches/Apktool/releases/download/v3.0.3/apktool_3.0.3.jar
+          fi
           java -jar tools/apktool.jar --version
 
       - name: Run pipeline
