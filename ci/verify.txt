@@ -1,0 +1,12 @@
+original: apks/new.apk (10987 entries)
+output:   apks/new_themed_signed.apk (10989 entries)
+dex files identical:    32/32
+native libs identical:  15/15
+assets identical:       3222/3222
+changed on purpose:     res/7de.png, res/7df.png, res/7er.png, res/7es.png, res/7f5.png, res/7f6.png, res/7hf.png, res/7hg.png, res/7is.png, res/7it.png, res/e3z.png, res/jx-.png, res/p64.png, res/uv6.png, res/zcc.png
+removed signatures:     none
+problems:               4
+  !! file missing from output: stamp-cert-sha256
+  !! unexpected new file: META-INF/MANIFEST.MF
+  !! unexpected new file: META-INF/PORT.RSA
+  !! unexpected new file: META-INF/PORT.SF

@@ -1,32 +1,105 @@
-EXIT CODE: 0
+EXIT CODE: 1
 ---------------- last 200 log lines ----------------
-271949972 firebase-iid-interop.properties (OK - compressed)
-271950094 vision-common.properties (OK - compressed)
-271950229 play-services-mlkit-text-recognition.properties (OK - compressed)
-271950365 firebase-iid.properties (OK - compressed)
-271950486 firebase-annotations.properties (OK - compressed)
-271950614 concurrentMain/default/manifest (OK - compressed)
-271950847 concurrentMain/default/linkdata/package_kotlinx.coroutines.internal/1_internal.knm (OK - compressed)
-271951514 concurrentMain/default/linkdata/package_kotlinx.coroutines.internal/0_internal.knm (OK - compressed)
-271952470 concurrentMain/default/linkdata/package_kotlinx.coroutines/0_coroutines.knm (OK - compressed)
-271952952 concurrentMain/default/linkdata/package_kotlinx.coroutines/2_coroutines.knm (OK - compressed)
-271953346 concurrentMain/default/linkdata/package_kotlinx.coroutines/1_coroutines.knm (OK - compressed)
-271953595 concurrentMain/default/linkdata/package_kotlinx.coroutines.channels/0_channels.knm (OK - compressed)
-271954102 concurrentMain/default/linkdata/module (OK - compressed)
-271954251 transport-backend-cct.properties (OK - compressed)
-271954364 LICENSE_UNICODE (OK - compressed)
-271955413 LICENSE_OFL (OK - compressed)
-271957377 billing-eap.properties (OK - compressed)
-271957499 play-services-fido.properties (OK - compressed)
-271957612 DebugProbesKt.bin (OK - compressed)
-271958461 play-services-auth.properties (OK - compressed)
-271958583 transport-runtime.properties (OK - compressed)
-271958707 firebase-components.properties (OK - compressed)
-271958836 firebase-encoders-json.properties (OK - compressed)
-271958968 play-services-identity.properties (OK - compressed)
-271959101 play-services-auth-base.properties (OK - compressed)
-271959218 image.properties (OK - compressed)
-271959331 firebase-common.properties (OK - compressed)
+264928534 res/zxz.xml (OK - compressed)
+264928801 res/zy-.xml (OK - compressed)
+264929063 res/zy0.xml (OK - compressed)
+264929349 res/zy1.xml (OK - compressed)
+264929613 res/zy2.xml (OK - compressed)
+264929879 res/zy3.xml (OK - compressed)
+264930271 res/zy4.xml (OK - compressed)
+264930532 res/zy5.xml (OK - compressed)
+264930803 res/zy6.xml (OK - compressed)
+264931159 res/zy7.xml (OK - compressed)
+264931461 res/zy8.xml (OK - compressed)
+264931864 res/zy9.xml (OK - compressed)
+264932428 res/zy_.xml (OK - compressed)
+264932689 res/zya.xml (OK - compressed)
+264933039 res/zyb.xml (OK - compressed)
+264933280 res/zyc.xml (OK - compressed)
+264933595 res/zyd.xml (OK - compressed)
+264934013 res/zye.xml (OK - compressed)
+264934408 res/zyf.xml (OK - compressed)
+264934738 res/zyg.xml (OK - compressed)
+264935004 res/zyh.xml (OK - compressed)
+264935269 res/zyi.xml (OK - compressed)
+264935529 res/zyj.xml (OK - compressed)
+264935800 res/zyk.xml (OK - compressed)
+264936025 res/zyl.xml (OK - compressed)
+264936251 res/zym.xml (OK - compressed)
+264936516 res/zyn.xml (OK - compressed)
+264936781 res/zyo.xml (OK - compressed)
+264937048 res/zyp.xml (OK - compressed)
+264937356 res/zyq.xml (OK - compressed)
+264937667 res/zyr.xml (OK - compressed)
+264937977 res/zys.xml (OK - compressed)
+264938286 res/zyt.xml (OK - compressed)
+264938550 res/zyu.xml (OK - compressed)
+264938814 res/zyv.xml (OK - compressed)
+264939079 res/zyw.xml (OK - compressed)
+264939448 res/zyx.xml (OK - compressed)
+264939714 res/zyy.xml (OK - compressed)
+264940062 res/zyz.xml (OK - compressed)
+264940325 res/zz-.xml (OK - compressed)
+264940592 res/zz0.png (OK)
+264973063 res/zz1.png (OK - compressed)
+264975156 res/zz2.xml (OK - compressed)
+264975505 res/zz3.xml (OK - compressed)
+264975800 res/zz4.xml (OK - compressed)
+264976064 res/zz5.xml (OK - compressed)
+264976327 res/zz6.xml (OK - compressed)
+264976598 res/zz7.xml (OK - compressed)
+264976825 res/zz8.xml (OK - compressed)
+264977093 res/zz9.xml (OK - compressed)
+264977356 res/zz_.xml (OK - compressed)
+264977627 res/zza.xml (OK - compressed)
+264977903 res/zzb.xml (OK - compressed)
+264978226 res/zzc.xml (OK - compressed)
+264978484 res/zzd.xml (OK - compressed)
+264978742 res/zze.xml (OK - compressed)
+264979031 res/zzf.xml (OK - compressed)
+264979410 res/zzg.xml (OK - compressed)
+264979680 res/zzh.xml (OK - compressed)
+264979945 res/zzi.xml (OK - compressed)
+264980210 res/zzj.xml (OK - compressed)
+264980476 res/zzk.xml (OK - compressed)
+264980786 res/zzl.xml (OK - compressed)
+264981308 res/zzm.xml (OK - compressed)
+264981532 res/zzn.xml (OK - compressed)
+264981846 res/zzo.xml (OK - compressed)
+264982112 res/zzp.xml (OK - compressed)
+264982463 res/zzq.xml (OK - compressed)
+264982714 res/zzr.xml (OK - compressed)
+264983029 res/zzs.xml (OK - compressed)
+264983255 res/zzt.xml (OK - compressed)
+264983505 res/zzu.xml (OK - compressed)
+264983857 res/zzv.xml (OK - compressed)
+264984153 res/zzw.xml (OK - compressed)
+264984471 res/zzy.xml (OK - compressed)
+264984767 res/zzz.xml (OK - compressed)
+264985224 resources.arsc (OK)
+271187583 review.properties (OK - compressed)
+271187678 src/google/protobuf/any.proto (OK - compressed)
+271190358 src/google/protobuf/api.proto (OK - compressed)
+271193336 src/google/protobuf/duration.proto (OK - compressed)
+271195455 src/google/protobuf/empty.proto (OK - compressed)
+271196727 src/google/protobuf/field_mask.proto (OK - compressed)
+271199920 src/google/protobuf/source_context.proto (OK - compressed)
+271201176 src/google/protobuf/struct.proto (OK - compressed)
+271202911 src/google/protobuf/timestamp.proto (OK - compressed)
+271205792 src/google/protobuf/type.proto (OK - compressed)
+271208233 src/google/protobuf/wrappers.proto (OK - compressed)
+271209833 transport-api.properties (OK - compressed)
+271209939 transport-backend-cct.properties (OK - compressed)
+271210049 transport-runtime.properties (OK - compressed)
+271210151 vision-common.properties (OK - compressed)
+271210251 vision-interfaces.properties (OK - compressed)
+271210359 webMain/default/linkdata/module (OK - compressed)
+271210511 webMain/default/linkdata/package_kotlinx.coroutines/0_coroutines.knm (OK - compressed)
+271211104 webMain/default/linkdata/package_kotlinx.coroutines/1_coroutines.knm (OK - compressed)
+271211656 webMain/default/linkdata/package_kotlinx.coroutines/2_coroutines.knm (OK - compressed)
+271213109 webMain/default/linkdata/package_kotlinx.coroutines.internal/0_internal.knm (OK - compressed)
+271213416 webMain/default/manifest (OK - compressed)
+271213565 stamp-cert-sha256 (OK - compressed)
 Verification successful
 =================== STAGE 6: keystore ===================
 Generating 2,048 bit RSA key pair and self-signed certificate (SHA384withRSA) with a validity of 10,000 days
@@ -44,159 +117,86 @@ Verified using v4 scheme (APK Signature Scheme v4): false
 Verified for SourceStamp: false
 Number of signers: 1
 V3.0 Signer: certificate DN: CN=APK Theme Port, OU=Build, O=Port, L=Internet, C=US
-V3.0 Signer: certificate SHA-256 digest: ca184b382e5c254095fc46818a8b3febae937da9eeccf3b1eb60409e2e64f90a
-V3.0 Signer: certificate SHA-1 digest: 32664013dfa5c1966fed5e9d01bca342008c4161
-V3.0 Signer: certificate MD5 digest: 0660b0226e993ea35de0af3d234c5ce1
+V3.0 Signer: certificate SHA-256 digest: b394f6e7ba0104bb1187d1d983f6aec592cea302815adbf2219a87190b6f8b97
+V3.0 Signer: certificate SHA-1 digest: 5a73a43e9fc4b87a5378dd207e2cab4a725023f4
+V3.0 Signer: certificate MD5 digest: 6c45b1cddd47e5e615ff34ce55e1c43b
 V3.0 Signer: key algorithm: RSA
 V3.0 Signer: key size (bits): 2048
-V3.0 Signer: public key SHA-256 digest: 16d1ee2f18add459d28099bfd959fddb204577a26a6b190e0d56bdfa9bd423aa
-V3.0 Signer: public key SHA-1 digest: 103b739f8377efa0e6ac1ca1055fa478257c0f2d
-V3.0 Signer: public key MD5 digest: 11262c70e2681aec8bf1cfa91f4a6574
-272443035 META-INF/PORT.RSA (OK - compressed)
-272444181 META-INF/MANIFEST.MF (OK - compressed)
+V3.0 Signer: public key SHA-256 digest: b14fa1b1564fae8f8ef1b3ec875d3aff5696b9913854b52524b60afac39da84f
+V3.0 Signer: public key SHA-1 digest: 0063bf5990ad28b338c4be3af7c541ec831b9158
+V3.0 Signer: public key MD5 digest: 524d1da7ebc71b71f6557a9c48b3f3f3
+271658313 META-INF/PORT.RSA (OK - compressed)
+271659466 META-INF/MANIFEST.MF (OK - compressed)
 Verification successful
+signed zip OK
+--- badging: original ---
 package: name='com.instagram.android' versionCode='386215111' versionName='456.1.0.56.78' platformBuildVersionName='17' platformBuildVersionCode='37' compileSdkVersion='37' compileSdkVersionCodename='17'
 install-location:'auto'
+uses-permission-sdk-23: name='android.permission.ACCESS_WIFI_STATE'
 minSdkVersion:'28'
 targetSdkVersion:'37'
-uses-permission-sdk-23: name='android.permission.ACCESS_WIFI_STATE'
 uses-permission: name='android.permission.INTERNET'
-uses-permission: name='android.permission.ACCESS_NETWORK_STATE'
-uses-permission: name='android.permission.WAKE_LOCK'
+--- badging: themed ---
 package: name='com.instagram.android' versionCode='386215111' versionName='456.1.0.56.78' platformBuildVersionName='17' platformBuildVersionCode='37' compileSdkVersion='37' compileSdkVersionCodename='17'
-application-label:'Instagram'
-application-label-af:'Instagram'
-application-label-am:'Instagram'
-application-label-ar:'Instagram'
-application-label-ar-XB:'Instagram'
-application-label-as:'Instagram'
-application-label-az:'Instagram'
-application-label-be:'Instagram'
-application-label-bg:'Instagram'
-application-label-bn:'Instagram'
-application-label-bs:'Instagram'
-application-label-ca:'Instagram'
-application-label-cb:'Instagram'
-application-label-cs:'Instagram'
-application-label-cx:'Instagram'
-application-label-da:'Instagram'
-application-label-de:'Instagram'
-application-label-el:'Instagram'
-application-label-en-GB:'Instagram'
-application-label-en-XA:'Instagram'
-application-label-es:'Instagram'
-application-label-es-ES:'Instagram'
-application-label-es-US:'Instagram'
-application-label-et:'Instagram'
-application-label-eu:'Instagram'
-application-label-fa:'Instagram'
-application-label-fb:'Instagram'
-application-label-fb-LS:'Instagram'
-application-label-fi:'Instagram'
-application-label-fr:'Instagram'
-application-label-fr-CA:'Instagram'
-application-label-gl:'Instagram'
-application-label-gn:'Instagram'
-application-label-gu:'Instagram'
-application-label-ha:'Instagram'
-application-label-hi:'Instagram'
-application-label-hr:'Instagram'
-application-label-hu:'Instagram'
-application-label-hy:'Instagram'
-application-label-in:'Instagram'
-application-label-is:'Instagram'
-application-label-it:'Instagram'
-application-label-iw:'Instagram'
-application-label-ja:'Instagram'
-application-label-jv:'Instagram'
-application-label-ka:'Instagram'
-application-label-kk:'Instagram'
-application-label-km:'Instagram'
-application-label-kn:'Instagram'
-application-label-ko:'Instagram'
-application-label-ku:'Instagram'
-application-label-ky:'Instagram'
-application-label-lo:'Instagram'
-application-label-lt:'Instagram'
-application-label-lv:'Instagram'
-application-label-mg:'Instagram'
-application-label-mk:'Instagram'
-application-label-ml:'Instagram'
-application-label-mn:'Instagram'
-application-label-mr:'Instagram'
-application-label-ms:'Instagram'
-application-label-my:'Instagram'
-application-label-nb:'Instagram'
-application-label-ne:'Instagram'
-application-label-nl:'Instagram'
-application-label-om:'Instagram'
-application-label-or:'Instagram'
-application-label-pa:'Instagram'
-application-label-pl:'Instagram'
-application-label-ps:'Instagram'
-application-label-pt:'Instagram'
-application-label-pt-BR:'Instagram'
-application-label-pt-PT:'Instagram'
-application-label-qz:'Instagram'
-application-label-ro:'Instagram'
-application-label-ru:'Instagram'
-application-label-rw:'Instagram'
-application-label-si:'Instagram'
-application-label-sk:'Instagram'
-application-label-sl:'Instagram'
-application-label-sn:'Instagram'
-application-label-so:'Instagram'
-application-label-sq:'Instagram'
-application-label-sr:'Instagram'
-application-label-sr-Latn:'Instagram'
-application-label-sv:'Instagram'
-application-label-sw:'Instagram'
-application-label-ta:'Instagram'
-application-label-te:'Instagram'
-application-label-tg:'Instagram'
-application-label-th:'Instagram'
-application-label-tl:'Instagram'
-application-label-tr:'Instagram'
-application-label-uk:'Instagram'
-application-label-ur:'Instagram'
-application-label-uz:'Instagram'
-application-label-vi:'Instagram'
-application-label-wo:'Instagram'
-application-label-zh-CN:'Instagram'
-application-label-zh-HK:'Instagram'
-application-label-zh-TW:'Instagram'
-application-label-zu:'Instagram'
-application-icon-160:'res/mipmap-anydpi/icon.xml'
-application-icon-240:'res/mipmap-anydpi/icon.xml'
-application-icon-320:'res/mipmap-anydpi/icon.xml'
-application-icon-480:'res/mipmap-anydpi/icon.xml'
-application-icon-640:'res/mipmap-anydpi/icon.xml'
-application-icon-65534:'res/mipmap-anydpi/icon.xml'
-application-icon-65535:'res/mipmap-anydpi/icon.xml'
--rw-r--r-- 1 runner runner 273974033 Nov 24 12:20 apks/new_themed_signed.apk
-4ad1d25ef4987369937acff2365cddb0a4406170a24b11a741333b873224454c  apks/new_themed_signed.apk
-=================== STAGE 9: upload ===================
-curl: (60) SSL: no alternative certificate subject name matches target hostname 'z0.at'
-More details here: https://curl.se/docs/sslcerts.html
+install-location:'auto'
+uses-permission-sdk-23: name='android.permission.ACCESS_WIFI_STATE'
+minSdkVersion:'28'
+targetSdkVersion:'37'
+uses-permission: name='android.permission.INTERNET'
+--- icon resources: original ---
+    resource 0x7f100027 mipmap/icon
+      (mdpi) (file) res/jx-.png type=PNG
+      (hdpi) (file) res/e3z.png type=PNG
+      (xhdpi) (file) res/p64.png type=PNG
+      (xxhdpi) (file) res/uv6.png type=PNG
+      (xxxhdpi) (file) res/zcc.png type=PNG
+      (anydpi) (file) res/7b8.xml type=XML
+--- icon resources: themed ---
+    resource 0x7f100027 mipmap/icon
+      (mdpi) (file) res/jx-.png type=PNG
+      (hdpi) (file) res/e3z.png type=PNG
+      (xhdpi) (file) res/p64.png type=PNG
+      (xxhdpi) (file) res/uv6.png type=PNG
+      (xxxhdpi) (file) res/zcc.png type=PNG
+      (anydpi) (file) res/7b8.xml type=XML
+--- palette check: original ---
+    resource 0x7f0600c4 color/blue_9
+      () #ff002952
+--
+      () @color/grey_5
+    resource 0x7f060188 color/direct_light_mode_composer_hint_text_color
+--
+    resource 0x7f060286 color/grey_5
+      () #ff999999
+--
+    resource 0x7f060434 color/orange_1
+      () #ffffdfc4
+--
+--- palette check: themed ---
+    resource 0x7f0600c4 color/blue_9
+      () #ff002952
+--
+      () @color/grey_5
+    resource 0x7f060188 color/direct_light_mode_composer_hint_text_color
+--
+    resource 0x7f060286 color/grey_5
+      () #ff999999
+--
+    resource 0x7f060434 color/orange_1
+      () #ffffdfc4
+--
+--- integrity: only icon + arsc may differ ---
 
-curl failed to verify the legitimacy of the server and therefore could not
-establish a secure connection to it. To learn more about this situation and
-how to fix it, please visit the webpage mentioned above.
-https://z0.at/ -> HTTP 000000
-head: cannot open '/tmp/up.txt' for reading: No such file or directory
-response: 
-grep: /tmp/up.txt: No such file or directory
-curl: (60) SSL: no alternative certificate subject name matches target hostname 'z0.at'
-More details here: https://curl.se/docs/sslcerts.html
-
-curl failed to verify the legitimacy of the server and therefore could not
-establish a secure connection to it. To learn more about this situation and
-how to fix it, please visit the webpage mentioned above.
-https://z0.at/upload -> HTTP 000000
-head: cannot open '/tmp/up.txt' for reading: No such file or directory
-response: 
-grep: /tmp/up.txt: No such file or directory
-z0.at did not return a link, trying x0.at
-x0.at -> HTTP 408
-response: 
-DOWNLOAD_URL=
+FAIL: output differs from the original APK outside the allowed set
+original: apks/new.apk (10987 entries)
+output:   apks/new_themed_signed.apk (10989 entries)
+dex files identical:    32/32
+native libs identical:  15/15
+assets identical:       3222/3222
+changed on purpose:     res/7de.png, res/7df.png, res/7er.png, res/7es.png, res/7f5.png, res/7f6.png, res/7hf.png, res/7hg.png, res/7is.png, res/7it.png, res/e3z.png, res/jx-.png, res/p64.png, res/uv6.png, res/zcc.png
+removed signatures:     none
+problems:               4
+  !! file missing from output: stamp-cert-sha256
+  !! unexpected new file: META-INF/MANIFEST.MF
+  !! unexpected new file: META-INF/PORT.RSA
+  !! unexpected new file: META-INF/PORT.SF

@@ -1,0 +1,26 @@
+old colors: 139 new colors: 1001
+colors that differ and can be ported: 0
+old icon source: apks/decoded_old/res/drawable-xxxhdpi-v4/icon.png (192, 192) dominant bg: (1, 1, 1, 255)
+resource mipmap/icon -> [('mdpi', 'res/jx-.png'), ('hdpi', 'res/e3z.png'), ('xhdpi', 'res/p64.png'), ('xxhdpi', 'res/uv6.png'), ('xxxhdpi', 'res/zcc.png'), ('anydpi', 'res/7b8.xml')]
+  replaced res/jx-.png (mdpi, 48x48)
+  replaced res/e3z.png (hdpi, 72x72)
+  replaced res/p64.png (xhdpi, 96x96)
+  replaced res/uv6.png (xxhdpi, 144x144)
+  replaced res/zcc.png (xxxhdpi, 192x192)
+  skip non-image anydpi res/7b8.xml
+resource mipmap/ig_launcher_foreground -> [('mdpi', 'res/7es.png'), ('hdpi', 'res/7df.png'), ('xhdpi', 'res/7f6.png'), ('xxhdpi', 'res/7hg.png'), ('xxxhdpi', 'res/7it.png')]
+  replaced res/7es.png (mdpi, 108x108)
+  replaced res/7df.png (hdpi, 162x162)
+  replaced res/7f6.png (xhdpi, 216x216)
+  replaced res/7hg.png (xxhdpi, 324x324)
+  replaced res/7it.png (xxxhdpi, 432x432)
+resource mipmap/ig_launcher_background -> [('mdpi', 'res/7er.png'), ('hdpi', 'res/7de.png'), ('xhdpi', 'res/7f5.png'), ('xxhdpi', 'res/7hf.png'), ('xxxhdpi', 'res/7is.png')]
+  replaced res/7er.png (mdpi, 108x108)
+  replaced res/7de.png (hdpi, 162x162)
+  replaced res/7f5.png (xhdpi, 216x216)
+  replaced res/7hf.png (xxhdpi, 324x324)
+  replaced res/7is.png (xxxhdpi, 432x432)
+rewrote apks/new_themed_unsigned.apk
+icon entries replaced: 15
+arsc colour values patched: 0
+signature files dropped: []
