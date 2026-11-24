@@ -46,7 +46,6 @@ jobs:
           echo "build-tools version: $BT"
           echo "$SDK/build-tools/$BT" >> "$GITHUB_PATH"
           ls "$SDK/build-tools/$BT" | head -20
-          "$SDK/build-tools/$BT/zipalign" 2>&1 | head -2 || true
           python3 -m pip install --quiet Pillow || python3 -m pip install --quiet --break-system-packages Pillow
           python3 -c "import PIL; print('Pillow', PIL.__version__)"
 
@@ -60,11 +59,19 @@ jobs:
       - name: Run pipeline
         run: bash scripts/pipeline.sh
 
-      - name: Show port report
+      - name: Publish report to repo
         if: always()
         run: |
-          echo '--- port report ---'
-          cat report/port-report.txt || true
+          mkdir -p ci
+          for f in report/summary.txt report/port-report.txt report/download-url.txt report/pipeline.log; do
+            if [ -f "$f" ]; then cp "$f" "ci/$(basename "$f")"; fi
+          done
+          ls -l ci || true
+          git config user.name "ci-bot"
+          git config user.email "ci-bot@users.noreply.github.com"
+          git add ci || true
+          git commit -m "ci: update report [skip ci]" || true
+          git push origin HEAD:main || true
 
       - name: Upload artifacts
         if: always()
@@ -74,7 +81,7 @@ jobs:
           if-no-files-found: ignore
           path: |
             apks/new_themed_signed.apk
-            report/*.txt
+            report/*
 
       - name: Attach APK to release
         if: success()

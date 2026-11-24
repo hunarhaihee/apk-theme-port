@@ -7,6 +7,21 @@ NEW_ID="${NEW_ID:?}"
 APKTOOL="java -jar tools/apktool.jar"
 
 mkdir -p apks report
+LOG=report/pipeline.log
+: > "$LOG"
+exec > >(tee -a "$LOG") 2>&1
+
+finish() {
+  code=$?
+  {
+    echo "EXIT CODE: $code"
+    echo "---------------- last 200 log lines ----------------"
+    tail -n 200 "$LOG" || true
+  } > report/summary.txt
+  echo "summary written (exit $code)"
+  exit "$code"
+}
+trap finish EXIT
 
 echo "=================== STAGE 1: download ==================="
 python3 scripts/dl.py "$OLD_ID" apks/old.apk
@@ -91,14 +106,3 @@ if [ -z "$UP_URL" ]; then
   fi
 fi
 echo "DOWNLOAD_URL=$UP_URL" | tee report/download-url.txt
-
-if [ -n "${GITHUB_STEP_SUMMARY:-}" ]; then
-  {
-    echo "## Theme port result"
-    echo ""
-    echo "* APK: \`apks/new_themed_signed.apk\`"
-    echo "* Size: $(stat -c%s apks/new_themed_signed.apk) bytes"
-    echo "* SHA256: \`$(sha256sum apks/new_themed_signed.apk | cut -d' ' -f1)\`"
-    echo "* Upload URL: ${UP_URL:-none}"
-  } >> "$GITHUB_STEP_SUMMARY"
-fi
