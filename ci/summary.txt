@@ -118,16 +118,16 @@ Verified using v4 scheme (APK Signature Scheme v4): false
 Verified for SourceStamp: false
 Number of signers: 1
 V3.0 Signer: certificate DN: CN=APK Theme Port, OU=Build, O=Port, L=Internet, C=US
-V3.0 Signer: certificate SHA-256 digest: c6670078ad95edfb38408398c37b43c582d478269c541bc82ba6843cc5931a06
-V3.0 Signer: certificate SHA-1 digest: a5598c08bcbf5b4514f11f7aa36d7315431f4b20
-V3.0 Signer: certificate MD5 digest: 68c5cf6d5e346c853b2cd49289e0443f
+V3.0 Signer: certificate SHA-256 digest: eece7993f73821889b0b285fbf9b7fa27bca1ac4dd18ec731af634fa29ff0147
+V3.0 Signer: certificate SHA-1 digest: 6d94504a60a29a3951f3ff2e37514d8531f881c3
+V3.0 Signer: certificate MD5 digest: 4b573e4e78b3c73ff10cc10cf5421687
 V3.0 Signer: key algorithm: RSA
 V3.0 Signer: key size (bits): 2048
-V3.0 Signer: public key SHA-256 digest: 49c267b40963d3422e15fe1dc6b57c119c680f02726500e4215fbbcca0ee6861
-V3.0 Signer: public key SHA-1 digest: 681848648211af915d05111edacc851fb4e60267
-V3.0 Signer: public key MD5 digest: 228d8997098a21c7b94e687aa5e959cd
-271832862 META-INF/PORT.RSA (OK - compressed)
-271834014 META-INF/MANIFEST.MF (OK - compressed)
+V3.0 Signer: public key SHA-256 digest: 718064c1cfac1f19e40818e1071638cb6e11d089bfc47506bdfae98519f1f9f3
+V3.0 Signer: public key SHA-1 digest: 580e0ded8d18a61988b0ed64212cac89ad950c19
+V3.0 Signer: public key MD5 digest: 490b9451b91b432ad8d354e870bc5456
+271832859 META-INF/PORT.RSA (OK - compressed)
+271834007 META-INF/MANIFEST.MF (OK - compressed)
 Verification successful
 signed zip OK
 --- badging: original ---
@@ -153,16 +153,16 @@ uses-permission-sdk-23: name='android.permission.ACCESS_WIFI_STATE'
 --
 --- palette: themed ---
     resource 0x7f0600c4 color/blue_9
-      () #0002080d
+      () #ff02080d
 --
       () @color/grey_5
     resource 0x7f060188 color/direct_light_mode_composer_hint_text_color
 --
     resource 0x7f060286 color/grey_5
-      () #004b4f54
+      () #ff4b4f54
 --
     resource 0x7f060434 color/orange_1
-      () #00fff1e6
+      () #fffff1e6
 --
 --- integrity: only icon + arsc may differ ---
 original: apks/new.apk (10987 entries)
@@ -176,8 +176,8 @@ added new signature:    META-INF/MANIFEST.MF, META-INF/PORT.RSA, META-INF/PORT.S
 problems:               0
 
 OK: only icon bitmaps + resources.arsc differ; code, libs and assets are untouched
--rw-r--r-- 1 runner runner 273119020 Nov 24 13:19 apks/new_themed_signed.apk
-db57c9220a5ffdccc6430ad76a0883080d5694ade98d67c1e56c1e5e6904f058  apks/new_themed_signed.apk
+-rw-r--r-- 1 runner runner 273119020 Nov 24 13:30 apks/new_themed_signed.apk
+a030eec19a704701eaa399a8c65d0860a71d15fcfd8c3493dc4f4c3e0d6ad46e  apks/new_themed_signed.apk
 =================== STAGE 9: upload ===================
 http://z0.at/ -> HTTP 302
 response: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
