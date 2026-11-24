@@ -1,0 +1,29 @@
+manifest icon   old='@drawable/icon' new='@mipmap/icon'
+manifest roundIcon old=None new=None
+porting icon @drawable/icon -> @mipmap/icon
+icon files ported: 0
+old colors: 139 old styles: 83
+  color blue_9 -> #ff02080d
+  color green_8 -> #ff1e380d
+  color green_9 -> #ff0a1304
+  color grey_5 -> #ff4b4f54
+  color orange_1 -> #fffff1e6
+  color orange_2 -> #ffffd4b3
+  color orange_3 -> #ffffb880
+  color orange_7 -> #ff7f3800
+  color orange_8 -> #ff4c2100
+  color orange_9 -> #ff190b00
+  color red_1 -> #fffeeaeb
+  color red_2 -> #fff8949c
+  color red_3 -> #fff56a74
+  color red_4 -> #fffa7483
+  color red_7 -> #ff78141c
+  color red_8 -> #ff480c11
+  color red_9 -> #ff180405
+  updated res/values/colors.xml
+  style EditTextStyle android:textColorHint -> #ffa5a7aa
+  style+ IgAutoCompleteTextView android:textColorHint -> #ffa5a7aa
+  skip missing res IgDialog android:windowBackground @android:color/transparent
+  style IgTranslucentWindow android:windowBackground -> #00000000
+  updated res/values/styles.xml
+theme entries ported: 20

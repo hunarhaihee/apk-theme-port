@@ -1,0 +1,202 @@
+EXIT CODE: 1
+---------------- last 200 log lines ----------------
+apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_arrowuprightsquare_outline_24.xml
+apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_arrowupshallowu_outline_24.xml
+apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_bankbuilding_filled_24.xml
+apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_bankbuilding_outline_24.xml
+apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_calendar_outline_24.xml
+apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_caretdown_filled_24.xml
+apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_caretdown_outline_24.xml
+apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_caretleft_outline_24.xml
+apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_caretright_filled_24.xml
+apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_caretright_outline_24.xml
+apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_caretup_outline_24.xml
+apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_checkmark_filled_24.xml
+apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_checkmark_outline_24.xml
+apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_checkmarkcircle_filled_24.xml
+apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_checkmarkcircle_outline_24.xml
+apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_checkmarkspikedcircle_filled_24.xml
+apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_checkmarksquare_filled_24.xml
+apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_circle_outline_24.xml
+apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_circledashedlefttwothirds_outline_24.xml
+apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_circlehandle_outline_24.xml
+--- old values files ---
+apks/decoded_old/res/values-af/plurals.xml
+apks/decoded_old/res/values-af/strings.xml
+apks/decoded_old/res/values-ar/plurals.xml
+apks/decoded_old/res/values-ar/strings.xml
+apks/decoded_old/res/values-bn/plurals.xml
+apks/decoded_old/res/values-bn/strings.xml
+apks/decoded_old/res/values-cs/plurals.xml
+apks/decoded_old/res/values-cs/strings.xml
+apks/decoded_old/res/values-da/plurals.xml
+apks/decoded_old/res/values-da/strings.xml
+apks/decoded_old/res/values-de/plurals.xml
+apks/decoded_old/res/values-de/strings.xml
+apks/decoded_old/res/values-el/plurals.xml
+apks/decoded_old/res/values-el/strings.xml
+apks/decoded_old/res/values-es-rAR/plurals.xml
+apks/decoded_old/res/values-es-rAR/strings.xml
+apks/decoded_old/res/values-es-rES/plurals.xml
+apks/decoded_old/res/values-es-rES/strings.xml
+apks/decoded_old/res/values-es/plurals.xml
+apks/decoded_old/res/values-es/strings.xml
+apks/decoded_old/res/values-fb/plurals.xml
+apks/decoded_old/res/values-fb/strings.xml
+apks/decoded_old/res/values-fi/plurals.xml
+apks/decoded_old/res/values-fi/strings.xml
+apks/decoded_old/res/values-fr/plurals.xml
+apks/decoded_old/res/values-fr/strings.xml
+apks/decoded_old/res/values-gu/plurals.xml
+apks/decoded_old/res/values-gu/strings.xml
+apks/decoded_old/res/values-hdpi-v4/dimens.xml
+apks/decoded_old/res/values-hi/plurals.xml
+apks/decoded_old/res/values-hi/strings.xml
+apks/decoded_old/res/values-hr/strings.xml
+apks/decoded_old/res/values-hu/strings.xml
+apks/decoded_old/res/values-in/plurals.xml
+apks/decoded_old/res/values-in/strings.xml
+apks/decoded_old/res/values-it/plurals.xml
+apks/decoded_old/res/values-it/strings.xml
+apks/decoded_old/res/values-iw/strings.xml
+apks/decoded_old/res/values-ja/plurals.xml
+apks/decoded_old/res/values-ja/strings.xml
+--- new values files ---
+apks/decoded_new/res/values-af/plurals.xml
+apks/decoded_new/res/values-af/strings.xml
+apks/decoded_new/res/values-am/strings.xml
+apks/decoded_new/res/values-ar-rXB/strings.xml
+apks/decoded_new/res/values-ar/plurals.xml
+apks/decoded_new/res/values-ar/strings.xml
+apks/decoded_new/res/values-as/plurals.xml
+apks/decoded_new/res/values-as/strings.xml
+apks/decoded_new/res/values-az/strings.xml
+apks/decoded_new/res/values-b+sr+Latn/arrays.xml
+apks/decoded_new/res/values-b+sr+Latn/plurals.xml
+apks/decoded_new/res/values-b+sr+Latn/strings.xml
+apks/decoded_new/res/values-be/strings.xml
+apks/decoded_new/res/values-bg/plurals.xml
+apks/decoded_new/res/values-bg/strings.xml
+apks/decoded_new/res/values-bn/plurals.xml
+apks/decoded_new/res/values-bn/strings.xml
+apks/decoded_new/res/values-bs/plurals.xml
+apks/decoded_new/res/values-bs/strings.xml
+apks/decoded_new/res/values-ca/strings.xml
+apks/decoded_new/res/values-cb/strings.xml
+apks/decoded_new/res/values-cs/plurals.xml
+apks/decoded_new/res/values-cs/strings.xml
+apks/decoded_new/res/values-cx/strings.xml
+apks/decoded_new/res/values-da/plurals.xml
+apks/decoded_new/res/values-da/strings.xml
+apks/decoded_new/res/values-de/plurals.xml
+apks/decoded_new/res/values-de/strings.xml
+apks/decoded_new/res/values-el/plurals.xml
+apks/decoded_new/res/values-el/strings.xml
+apks/decoded_new/res/values-en-rGB/plurals.xml
+apks/decoded_new/res/values-en-rGB/strings.xml
+apks/decoded_new/res/values-en-rXA/strings.xml
+apks/decoded_new/res/values-es-rES/plurals.xml
+apks/decoded_new/res/values-es-rES/strings.xml
+apks/decoded_new/res/values-es-rUS/strings.xml
+apks/decoded_new/res/values-es/plurals.xml
+apks/decoded_new/res/values-es/strings.xml
+apks/decoded_new/res/values-et/plurals.xml
+apks/decoded_new/res/values-et/strings.xml
+old public.xml: 3836 lines
+new public.xml: 38934 lines
+=================== STAGE 3: port icon + theme ===================
+manifest icon   old='@drawable/icon' new='@mipmap/icon'
+manifest roundIcon old=None new=None
+porting icon @drawable/icon -> @mipmap/icon
+icon files ported: 0
+old colors: 139 old styles: 83
+  color blue_9 -> #ff02080d
+  color green_8 -> #ff1e380d
+  color green_9 -> #ff0a1304
+  color grey_5 -> #ff4b4f54
+  color orange_1 -> #fffff1e6
+  color orange_2 -> #ffffd4b3
+  color orange_3 -> #ffffb880
+  color orange_7 -> #ff7f3800
+  color orange_8 -> #ff4c2100
+  color orange_9 -> #ff190b00
+  color red_1 -> #fffeeaeb
+  color red_2 -> #fff8949c
+  color red_3 -> #fff56a74
+  color red_4 -> #fffa7483
+  color red_7 -> #ff78141c
+  color red_8 -> #ff480c11
+  color red_9 -> #ff180405
+  updated res/values/colors.xml
+  style EditTextStyle android:textColorHint -> #ffa5a7aa
+  style+ IgAutoCompleteTextView android:textColorHint -> #ffa5a7aa
+  skip missing res IgDialog android:windowBackground @android:color/transparent
+  style IgTranslucentWindow android:windowBackground -> #00000000
+  updated res/values/styles.xml
+theme entries ported: 20
+[warn] no icon file was replaced
+=================== STAGE 4: rebuild ===================
+I: Using Apktool 2.11.1 on new_themed_unsigned.apk with 4 threads
+I: Copying raw classes.dex file...
+I: Copying raw classes10.dex file...
+I: Copying raw classes11.dex file...
+I: Copying raw classes12.dex file...
+I: Copying raw classes13.dex file...
+I: Copying raw classes14.dex file...
+I: Copying raw classes15.dex file...
+I: Copying raw classes16.dex file...
+I: Copying raw classes17.dex file...
+I: Copying raw classes18.dex file...
+I: Copying raw classes19.dex file...
+I: Copying raw classes2.dex file...
+I: Copying raw classes20.dex file...
+I: Copying raw classes21.dex file...
+I: Copying raw classes22.dex file...
+I: Copying raw classes23.dex file...
+I: Copying raw classes24.dex file...
+I: Copying raw classes25.dex file...
+I: Copying raw classes26.dex file...
+I: Copying raw classes27.dex file...
+I: Copying raw classes28.dex file...
+I: Copying raw classes29.dex file...
+I: Copying raw classes3.dex file...
+I: Copying raw classes30.dex file...
+I: Copying raw classes31.dex file...
+I: Copying raw classes32.dex file...
+I: Copying raw classes4.dex file...
+I: Copying raw classes5.dex file...
+I: Copying raw classes6.dex file...
+I: Copying raw classes7.dex file...
+I: Copying raw classes8.dex file...
+I: Copying raw classes9.dex file...
+I: Checking whether resources have changed...
+I: Building resources with aapt2...
+W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values-h640dp/layouts.xml:3: error: invalid value for type 'layout'. Expected a reference.
+W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values-h640dp/layouts.xml: error: file failed to compile.
+W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values-land/layouts.xml:3: error: invalid value for type 'layout'. Expected a reference.
+W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values-land/layouts.xml:4: error: invalid value for type 'layout'. Expected a reference.
+W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values-land/layouts.xml: error: file failed to compile.
+W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values-sw600dp/layouts.xml:3: error: invalid value for type 'layout'. Expected a reference.
+W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values-sw600dp/layouts.xml:4: error: invalid value for type 'layout'. Expected a reference.
+W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values-sw600dp/layouts.xml: error: file failed to compile.
+W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values/layouts.xml:3: error: invalid value for type 'layout'. Expected a reference.
+W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values/layouts.xml:4: error: invalid value for type 'layout'. Expected a reference.
+W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values/layouts.xml:5: error: invalid value for type 'layout'. Expected a reference.
+W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values/layouts.xml:6: error: invalid value for type 'layout'. Expected a reference.
+W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values/layouts.xml:7: error: invalid value for type 'layout'. Expected a reference.
+W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values/layouts.xml:8: error: invalid value for type 'layout'. Expected a reference.
+W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values/layouts.xml:9: error: invalid value for type 'layout'. Expected a reference.
+W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values/layouts.xml:10: error: invalid value for type 'layout'. Expected a reference.
+W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values/layouts.xml:11: error: invalid value for type 'layout'. Expected a reference.
+W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values/layouts.xml:12: error: invalid value for type 'layout'. Expected a reference.
+W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values/layouts.xml:13: error: invalid value for type 'layout'. Expected a reference.
+W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values/layouts.xml:14: error: invalid value for type 'layout'. Expected a reference.
+Exception in thread "main" brut.androlib.exceptions.AndrolibException: brut.common.BrutException: could not exec (exit code = 1): [/tmp/brut_util_Jar_98544321138942403814885877581240202688.tmp, compile, --dir, /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res, --legacy, -o, /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/build/resources.zip]
+	at brut.androlib.AaptInvoker.invoke(SourceFile:106)
+	at brut.androlib.ApkBuilder.buildResources(SourceFile:352)
+	at brut.androlib.ApkBuilder.build(SourceFile:93)
+	at brut.apktool.Main.main(SourceFile:322)
+Caused by: brut.common.BrutException: could not exec (exit code = 1): [/tmp/brut_util_Jar_98544321138942403814885877581240202688.tmp, compile, --dir, /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res, --legacy, -o, /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/build/resources.zip]
+	at brut.util.OS.exec(SourceFile:143)
+	at brut.androlib.AaptInvoker.invoke(SourceFile:102)
+	... 3 more
