@@ -1,5 +1,6 @@
 old colors: 139 new colors: 1001
 colors that differ and can be ported: 17
+palette entries with a resource id: 17
 old icon source: apks/decoded_old/res/drawable-xxxhdpi-v4/icon.png (192, 192) dominant bg: (1, 1, 1, 255)
 resource mipmap/icon -> [('mdpi', 'res/jx-.png'), ('hdpi', 'res/e3z.png'), ('xhdpi', 'res/p64.png'), ('xxhdpi', 'res/uv6.png'), ('xxxhdpi', 'res/zcc.png'), ('anydpi', 'res/7b8.xml')]
   replaced res/jx-.png (mdpi, 48x48)
@@ -20,25 +21,25 @@ resource mipmap/ig_launcher_background -> [('mdpi', 'res/7er.png'), ('hdpi', 're
   replaced res/7f5.png (xhdpi, 216x216)
   replaced res/7hf.png (xxhdpi, 324x324)
   replaced res/7is.png (xxxhdpi, 432x432)
-  arsc color #999999 -> #4b4f54 occurrences: 1 ['grey_5']
-  arsc color #002952 -> #02080d occurrences: 0 ['blue_9']
-  arsc color #540007 -> #180405 occurrences: 0 ['red_9']
-  arsc color #6f0810 -> #480c11 occurrences: 0 ['red_8']
-  arsc color #ab1824 -> #78141c occurrences: 0 ['red_7']
-  arsc color #ff6571 -> #fa7483 occurrences: 0 ['red_4']
-  arsc color #ff8e97 -> #f56a74 occurrences: 0 ['red_3']
-  arsc color #ffbec3 -> #f8949c occurrences: 0 ['red_2']
-  arsc color #ffdddf -> #feeaeb occurrences: 0 ['red_1']
-  arsc color #5a1b00 -> #190b00 occurrences: 0 ['orange_9']
-  arsc color #802a01 -> #4c2100 occurrences: 0 ['orange_8']
-  arsc color #d14a01 -> #7f3800 occurrences: 0 ['orange_7']
-  arsc color #ffb35a -> #ffb880 occurrences: 0 ['orange_3']
-  arsc color #ffc584 -> #ffd4b3 occurrences: 0 ['orange_2']
-  arsc color #ffdfc4 -> #fff1e6 occurrences: 0 ['orange_1']
-  arsc color #044615 -> #0a1304 occurrences: 0 ['green_9']
-  arsc color #086823 -> #1e380d occurrences: 0 ['green_8']
+  patched color blue_9 entries: 3
+  patched color green_8 entries: 3
+  patched color green_9 entries: 3
+  patched color grey_5 entries: 3
+  patched color orange_1 entries: 3
+  patched color orange_2 entries: 3
+  patched color orange_3 entries: 3
+  patched color orange_7 entries: 3
+  patched color orange_8 entries: 3
+  patched color orange_9 entries: 3
+  patched color red_1 entries: 3
+  patched color red_2 entries: 3
+  patched color red_3 entries: 3
+  patched color red_4 entries: 3
+  patched color red_7 entries: 3
+  patched color red_8 entries: 3
+  patched color red_9 entries: 3
 rewrote apks/new_themed_unsigned.apk
 icon entries replaced: 15
-arsc colour values patched: 1
+palette colours patched: 17
 signature files dropped: []
 icon preview tiles: ['old', 'background', 'foreground']

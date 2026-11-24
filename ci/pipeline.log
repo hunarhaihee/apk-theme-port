@@ -3671,6 +3671,7 @@ I: Copying unknown files...
 =================== STAGE 3: repackage (icon + palette) ===================
 old colors: 139 new colors: 1001
 colors that differ and can be ported: 17
+palette entries with a resource id: 17
 old icon source: apks/decoded_old/res/drawable-xxxhdpi-v4/icon.png (192, 192) dominant bg: (1, 1, 1, 255)
 resource mipmap/icon -> [('mdpi', 'res/jx-.png'), ('hdpi', 'res/e3z.png'), ('xhdpi', 'res/p64.png'), ('xxhdpi', 'res/uv6.png'), ('xxxhdpi', 'res/zcc.png'), ('anydpi', 'res/7b8.xml')]
   replaced res/jx-.png (mdpi, 48x48)
@@ -3691,29 +3692,32 @@ resource mipmap/ig_launcher_background -> [('mdpi', 'res/7er.png'), ('hdpi', 're
   replaced res/7f5.png (xhdpi, 216x216)
   replaced res/7hf.png (xxhdpi, 324x324)
   replaced res/7is.png (xxxhdpi, 432x432)
-  arsc color #999999 -> #4b4f54 occurrences: 1 ['grey_5']
-  arsc color #002952 -> #02080d occurrences: 0 ['blue_9']
-  arsc color #540007 -> #180405 occurrences: 0 ['red_9']
-  arsc color #6f0810 -> #480c11 occurrences: 0 ['red_8']
-  arsc color #ab1824 -> #78141c occurrences: 0 ['red_7']
-  arsc color #ff6571 -> #fa7483 occurrences: 0 ['red_4']
-  arsc color #ff8e97 -> #f56a74 occurrences: 0 ['red_3']
-  arsc color #ffbec3 -> #f8949c occurrences: 0 ['red_2']
-  arsc color #ffdddf -> #feeaeb occurrences: 0 ['red_1']
-  arsc color #5a1b00 -> #190b00 occurrences: 0 ['orange_9']
-  arsc color #802a01 -> #4c2100 occurrences: 0 ['orange_8']
-  arsc color #d14a01 -> #7f3800 occurrences: 0 ['orange_7']
-  arsc color #ffb35a -> #ffb880 occurrences: 0 ['orange_3']
-  arsc color #ffc584 -> #ffd4b3 occurrences: 0 ['orange_2']
-  arsc color #ffdfc4 -> #fff1e6 occurrences: 0 ['orange_1']
-  arsc color #044615 -> #0a1304 occurrences: 0 ['green_9']
-  arsc color #086823 -> #1e380d occurrences: 0 ['green_8']
+  patched color blue_9 entries: 3
+  patched color green_8 entries: 3
+  patched color green_9 entries: 3
+  patched color grey_5 entries: 3
+  patched color orange_1 entries: 3
+  patched color orange_2 entries: 3
+  patched color orange_3 entries: 3
+  patched color orange_7 entries: 3
+  patched color orange_8 entries: 3
+  patched color orange_9 entries: 3
+  patched color red_1 entries: 3
+  patched color red_2 entries: 3
+  patched color red_3 entries: 3
+  patched color red_4 entries: 3
+  patched color red_7 entries: 3
+  patched color red_8 entries: 3
+  patched color red_9 entries: 3
 rewrote apks/new_themed_unsigned.apk
 icon entries replaced: 15
-arsc colour values patched: 1
+palette colours patched: 17
 signature files dropped: []
 icon preview tiles: ['old', 'background', 'foreground']
 unsigned zip OK
+--- palette check on the unsigned output ---
+palette colours carrying old values: 17/17
+OK: palette ported
 =================== STAGE 3b: analysis + diagnostics ===================
 apktool: 3.0.3
 aapt2: /usr/local/lib/android/sdk/build-tools/37.0.0/aapt2 Android Asset Packaging Tool (aapt) 2.20-15087165
@@ -14862,29 +14866,27 @@ Verified using v4 scheme (APK Signature Scheme v4): false
 Verified for SourceStamp: false
 Number of signers: 1
 V3.0 Signer: certificate DN: CN=APK Theme Port, OU=Build, O=Port, L=Internet, C=US
-V3.0 Signer: certificate SHA-256 digest: b339b9938d7f3dbc5a9dc5292aae0a6ffdddec96d0faf4dcc0656fccf78f7096
-V3.0 Signer: certificate SHA-1 digest: 974f492c2fb5399806c4f32103aee9d81b2437c5
-V3.0 Signer: certificate MD5 digest: 73d611ecb54298e3a4c3968d3cd29708
+V3.0 Signer: certificate SHA-256 digest: 8627b57ac2302c90234701fc47dcc5f13fcd09d31f1b63396e231786d2bf24ed
+V3.0 Signer: certificate SHA-1 digest: 48b6c1b50f9beeb4ab5a8d4908f720e7e704c4a5
+V3.0 Signer: certificate MD5 digest: eca3408baed7a2c20ebed4f28d734790
 V3.0 Signer: key algorithm: RSA
 V3.0 Signer: key size (bits): 2048
-V3.0 Signer: public key SHA-256 digest: b4613ef01158eb70094c32e2cd1c36b2a73049abf5146784cc246f4b0f7a7e3c
-V3.0 Signer: public key SHA-1 digest: 1db9d1126f27ecf9edb6feffd1d8e21c77f99391
-V3.0 Signer: public key MD5 digest: 30a078970cfdbdf227ade6975ef27298
+V3.0 Signer: public key SHA-256 digest: 0112a0bdd7c6fc30d6a7d56b79b2b3f8e444e6188f3d645bc7125217188be550
+V3.0 Signer: public key SHA-1 digest: 56435e210797f38735a76a1717b10811eae7cf6a
+V3.0 Signer: public key MD5 digest: 31d0ecd43962606f07514359358028b9
 271832862 META-INF/PORT.RSA (OK - compressed)
-271834012 META-INF/MANIFEST.MF (OK - compressed)
+271834010 META-INF/MANIFEST.MF (OK - compressed)
 Verification successful
 signed zip OK
 --- badging: original ---
 package: name='com.instagram.android' versionCode='386215111' versionName='456.1.0.56.78' platformBuildVersionName='17' platformBuildVersionCode='37' compileSdkVersion='37' compileSdkVersionCodename='17'
 install-location:'auto'
 uses-permission-sdk-23: name='android.permission.ACCESS_WIFI_STATE'
-minSdkVersion:'28'
 --- badging: themed ---
 package: name='com.instagram.android' versionCode='386215111' versionName='456.1.0.56.78' platformBuildVersionName='17' platformBuildVersionCode='37' compileSdkVersion='37' compileSdkVersionCodename='17'
 install-location:'auto'
 uses-permission-sdk-23: name='android.permission.ACCESS_WIFI_STATE'
-minSdkVersion:'28'
---- palette check: original ---
+--- palette: original ---
     resource 0x7f0600c4 color/blue_9
       () #ff002952
 --
@@ -14897,18 +14899,18 @@ minSdkVersion:'28'
     resource 0x7f060434 color/orange_1
       () #ffffdfc4
 --
---- palette check: themed ---
+--- palette: themed ---
     resource 0x7f0600c4 color/blue_9
-      () #ff002952
+      () #0002080d
 --
       () @color/grey_5
     resource 0x7f060188 color/direct_light_mode_composer_hint_text_color
 --
     resource 0x7f060286 color/grey_5
-      () #ff999999
+      () #004b4f54
 --
     resource 0x7f060434 color/orange_1
-      () #ffffdfc4
+      () #00fff1e6
 --
 --- integrity: only icon + arsc may differ ---
 original: apks/new.apk (10987 entries)
@@ -14922,31 +14924,29 @@ added new signature:    META-INF/MANIFEST.MF, META-INF/PORT.RSA, META-INF/PORT.S
 problems:               0
 
 OK: only icon bitmaps + resources.arsc differ; code, libs and assets are untouched
--rw-r--r-- 1 runner runner 273119020 Nov 24 12:44 apks/new_themed_signed.apk
-d5b18558dd8cfcd77dd16ce2a39c71f2568c8cb68c45160b095f19f9191ad75d  apks/new_themed_signed.apk
+-rw-r--r-- 1 runner runner 273119020 Nov 24 13:01 apks/new_themed_signed.apk
+07e0fd7e2e16d7dc1637553dd5f12dc91a2c78234bbf256bcebdad6a05cb804d  apks/new_themed_signed.apk
 =================== STAGE 9: upload ===================
-curl: (60) SSL: no alternative certificate subject name matches target hostname 'z0.at'
-More details here: https://curl.se/docs/sslcerts.html
-
-curl failed to verify the legitimacy of the server and therefore could not
-establish a secure connection to it. To learn more about this situation and
-how to fix it, please visit the webpage mentioned above.
-https://z0.at/ -> HTTP 000000
-head: cannot open '/tmp/up.txt' for reading: No such file or directory
-response: 
-grep: /tmp/up.txt: No such file or directory
-curl: (60) SSL: no alternative certificate subject name matches target hostname 'z0.at'
-More details here: https://curl.se/docs/sslcerts.html
-
-curl failed to verify the legitimacy of the server and therefore could not
-establish a secure connection to it. To learn more about this situation and
-how to fix it, please visit the webpage mentioned above.
-https://z0.at/upload -> HTTP 000000
-head: cannot open '/tmp/up.txt' for reading: No such file or directory
-response: 
-grep: /tmp/up.txt: No such file or directory
-z0.at did not return a link, trying x0.at
-x0.at -> HTTP 408
-response: 
+http://z0.at/ -> HTTP 302
+response: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>302 Found</title>
+</head><body>
+<h1>Found</h1>
+<p>The document has moved <a href="http://www.z0.at">here</a>.</p>
+</body></html>
+https://z0.at/ -> HTTP 302
+response: <!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML 2.0//EN">
+<html><head>
+<title>302 Found</title>
+</head><body>
+<h1>Found</h1>
+<p>The document has moved <a href="http://www.z0.at">here</a>.</p>
+</body></html>
+https://0x0.st -> HTTP 503
+response: uploads disabled because it’s been almost nothing but AI botnet spam for the past few months. will be back with a few changes at some point. no ETA.
+curl: (56) OpenSSL SSL_read: OpenSSL/3.5.5: error:0A000126:SSL routines::unexpected eof while reading, errno 0
+https://x0.at/ -> HTTP 000000
+response: uploads disabled because it’s been almost nothing but AI botnet spam for the past few months. will be back with a few changes at some point. no ETA.
 DOWNLOAD_URL=
 summary written (exit 0)
