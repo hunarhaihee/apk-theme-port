@@ -15,6 +15,15 @@ TYPE_REFERENCE = 0x01
 COLOR_TYPES = (0x1C, 0x1D)  # ARGB8, RGB8
 
 
+def normalize_hex(hex_value):
+    """Old apk stores palette colours as RGB8, which apktool decodes as
+    #00RRGGBB. Those are opaque colours, so drop the zero alpha."""
+    value = hex_value.strip().lower()
+    if len(value) == 9 and value[1:3] == "00":
+        return "#ff" + value[3:]
+    return value
+
+
 def res_pool(data, off):
     try:
         ctype, header_size, _size = struct.unpack_from("<HHI", data, off)
@@ -131,8 +140,9 @@ def read_value(data, voff):
 
 def write_color(data, voff, hex_value):
     """Write a colour into a Res_value, keeping the 8-byte size."""
-    value = int(hex_value[1:], 16)
-    if len(hex_value) == 7:
+    value_str = normalize_hex(hex_value)
+    value = int(value_str[1:], 16)
+    if len(value_str) == 7:
         dtype = 0x1D if data[voff + 3] == 0x1D else 0x1C
         if dtype == 0x1C:
             value |= 0xFF000000

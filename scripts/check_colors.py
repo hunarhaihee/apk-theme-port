@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 """Assert that the themed APK really carries the OLD palette values."""
 import json
+import os
 import re
 import subprocess
 import sys
 
 AAPT2 = "aapt2"
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from arsc import normalize_hex  # noqa: E402
 
 
 def dump(apk):
@@ -14,7 +17,8 @@ def dump(apk):
 
 def main():
     apk = sys.argv[1]
-    expected = json.load(open("report/expected-colors.json"))
+    raw = json.load(open("report/expected-colors.json"))
+    expected = {k: normalize_hex(v) for k, v in raw.items()}
     if not expected:
         print("no expected colours recorded")
         return 0
