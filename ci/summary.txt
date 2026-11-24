@@ -1,19 +1,5 @@
 EXIT CODE: 1
 ---------------- last 200 log lines ----------------
-apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_arrowuprightsquare_outline_24.xml
-apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_arrowupshallowu_outline_24.xml
-apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_bankbuilding_filled_24.xml
-apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_bankbuilding_outline_24.xml
-apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_calendar_outline_24.xml
-apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_caretdown_filled_24.xml
-apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_caretdown_outline_24.xml
-apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_caretleft_outline_24.xml
-apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_caretright_filled_24.xml
-apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_caretright_outline_24.xml
-apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_caretup_outline_24.xml
-apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_checkmark_filled_24.xml
-apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_checkmark_outline_24.xml
-apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_checkmarkcircle_filled_24.xml
 apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_checkmarkcircle_outline_24.xml
 apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_checkmarkspikedcircle_filled_24.xml
 apks/decoded_new/res/drawable-mdpi/rkjsmodules_public_xmlsvgassets_metabrandedassets_generated_meta_brand_design_system_icons_vector_checkmarksquare_filled_24.xml
@@ -105,10 +91,26 @@ apks/decoded_new/res/values-et/strings.xml
 old public.xml: 3836 lines
 new public.xml: 38934 lines
 =================== STAGE 3: port icon + theme ===================
-manifest icon   old='@drawable/icon' new='@mipmap/icon'
+manifest icon      old='@drawable/icon' new='@mipmap/icon'
 manifest roundIcon old=None new=None
 porting icon @drawable/icon -> @mipmap/icon
-icon files ported: 0
+  icon res/mipmap-hdpi/icon.png <- res/drawable-xxxhdpi-v4/icon.png
+  icon res/mipmap-mdpi/icon.png <- res/drawable-xxxhdpi-v4/icon.png
+  icon res/mipmap-xhdpi/icon.png <- res/drawable-xxxhdpi-v4/icon.png
+  icon res/mipmap-xxhdpi/icon.png <- res/drawable-xxxhdpi-v4/icon.png
+  icon res/mipmap-xxxhdpi/icon.png <- res/drawable-xxxhdpi-v4/icon.png
+  adaptive layers to fill: {'background': '@mipmap/ig_launcher_background', 'foreground': '@mipmap/ig_launcher_foreground', 'monochrome': '@drawable/ig_launcher_monochrome'}
+  adaptive layer background res/mipmap-hdpi/ig_launcher_background.png <- res/drawable-xxxhdpi-v4/icon.png
+  adaptive layer background res/mipmap-mdpi/ig_launcher_background.png <- res/drawable-xxxhdpi-v4/icon.png
+  adaptive layer background res/mipmap-xhdpi/ig_launcher_background.png <- res/drawable-xxxhdpi-v4/icon.png
+  adaptive layer background res/mipmap-xxhdpi/ig_launcher_background.png <- res/drawable-xxxhdpi-v4/icon.png
+  adaptive layer background res/mipmap-xxxhdpi/ig_launcher_background.png <- res/drawable-xxxhdpi-v4/icon.png
+  adaptive layer foreground res/mipmap-hdpi/ig_launcher_foreground.png <- res/drawable-xxxhdpi-v4/icon.png
+  adaptive layer foreground res/mipmap-mdpi/ig_launcher_foreground.png <- res/drawable-xxxhdpi-v4/icon.png
+  adaptive layer foreground res/mipmap-xhdpi/ig_launcher_foreground.png <- res/drawable-xxxhdpi-v4/icon.png
+  adaptive layer foreground res/mipmap-xxhdpi/ig_launcher_foreground.png <- res/drawable-xxxhdpi-v4/icon.png
+  adaptive layer foreground res/mipmap-xxxhdpi/ig_launcher_foreground.png <- res/drawable-xxxhdpi-v4/icon.png
+icon files ported: 15
 old colors: 139 old styles: 83
   color blue_9 -> #ff02080d
   color green_8 -> #ff1e380d
@@ -127,14 +129,12 @@ old colors: 139 old styles: 83
   color red_7 -> #ff78141c
   color red_8 -> #ff480c11
   color red_9 -> #ff180405
-  updated res/values/colors.xml
   style EditTextStyle android:textColorHint -> #ffa5a7aa
   style+ IgAutoCompleteTextView android:textColorHint -> #ffa5a7aa
-  skip missing res IgDialog android:windowBackground @android:color/transparent
+  style+ IgDialog android:windowBackground -> @android:color/transparent
   style IgTranslucentWindow android:windowBackground -> #00000000
-  updated res/values/styles.xml
-theme entries ported: 20
-[warn] no icon file was replaced
+theme entries ported: 21
+alias entries normalized: 0
 =================== STAGE 4: rebuild ===================
 I: Using Apktool 2.11.1 on new_themed_unsigned.apk with 4 threads
 I: Copying raw classes.dex file...
@@ -191,12 +191,12 @@ W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values/l
 W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values/layouts.xml:12: error: invalid value for type 'layout'. Expected a reference.
 W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values/layouts.xml:13: error: invalid value for type 'layout'. Expected a reference.
 W: /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res/values/layouts.xml:14: error: invalid value for type 'layout'. Expected a reference.
-Exception in thread "main" brut.androlib.exceptions.AndrolibException: brut.common.BrutException: could not exec (exit code = 1): [/tmp/brut_util_Jar_98544321138942403814885877581240202688.tmp, compile, --dir, /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res, --legacy, -o, /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/build/resources.zip]
+Exception in thread "main" brut.androlib.exceptions.AndrolibException: brut.common.BrutException: could not exec (exit code = 1): [/tmp/brut_util_Jar_169799806350131712255106930858186318497.tmp, compile, --dir, /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res, --legacy, -o, /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/build/resources.zip]
 	at brut.androlib.AaptInvoker.invoke(SourceFile:106)
 	at brut.androlib.ApkBuilder.buildResources(SourceFile:352)
 	at brut.androlib.ApkBuilder.build(SourceFile:93)
 	at brut.apktool.Main.main(SourceFile:322)
-Caused by: brut.common.BrutException: could not exec (exit code = 1): [/tmp/brut_util_Jar_98544321138942403814885877581240202688.tmp, compile, --dir, /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res, --legacy, -o, /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/build/resources.zip]
+Caused by: brut.common.BrutException: could not exec (exit code = 1): [/tmp/brut_util_Jar_169799806350131712255106930858186318497.tmp, compile, --dir, /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/res, --legacy, -o, /home/runner/work/apk-theme-port/apk-theme-port/apks/decoded_new/build/resources.zip]
 	at brut.util.OS.exec(SourceFile:143)
 	at brut.androlib.AaptInvoker.invoke(SourceFile:102)
 	... 3 more

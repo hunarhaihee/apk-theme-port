@@ -1,7 +1,23 @@
-manifest icon   old='@drawable/icon' new='@mipmap/icon'
+manifest icon      old='@drawable/icon' new='@mipmap/icon'
 manifest roundIcon old=None new=None
 porting icon @drawable/icon -> @mipmap/icon
-icon files ported: 0
+  icon res/mipmap-hdpi/icon.png <- res/drawable-xxxhdpi-v4/icon.png
+  icon res/mipmap-mdpi/icon.png <- res/drawable-xxxhdpi-v4/icon.png
+  icon res/mipmap-xhdpi/icon.png <- res/drawable-xxxhdpi-v4/icon.png
+  icon res/mipmap-xxhdpi/icon.png <- res/drawable-xxxhdpi-v4/icon.png
+  icon res/mipmap-xxxhdpi/icon.png <- res/drawable-xxxhdpi-v4/icon.png
+  adaptive layers to fill: {'background': '@mipmap/ig_launcher_background', 'foreground': '@mipmap/ig_launcher_foreground', 'monochrome': '@drawable/ig_launcher_monochrome'}
+  adaptive layer background res/mipmap-hdpi/ig_launcher_background.png <- res/drawable-xxxhdpi-v4/icon.png
+  adaptive layer background res/mipmap-mdpi/ig_launcher_background.png <- res/drawable-xxxhdpi-v4/icon.png
+  adaptive layer background res/mipmap-xhdpi/ig_launcher_background.png <- res/drawable-xxxhdpi-v4/icon.png
+  adaptive layer background res/mipmap-xxhdpi/ig_launcher_background.png <- res/drawable-xxxhdpi-v4/icon.png
+  adaptive layer background res/mipmap-xxxhdpi/ig_launcher_background.png <- res/drawable-xxxhdpi-v4/icon.png
+  adaptive layer foreground res/mipmap-hdpi/ig_launcher_foreground.png <- res/drawable-xxxhdpi-v4/icon.png
+  adaptive layer foreground res/mipmap-mdpi/ig_launcher_foreground.png <- res/drawable-xxxhdpi-v4/icon.png
+  adaptive layer foreground res/mipmap-xhdpi/ig_launcher_foreground.png <- res/drawable-xxxhdpi-v4/icon.png
+  adaptive layer foreground res/mipmap-xxhdpi/ig_launcher_foreground.png <- res/drawable-xxxhdpi-v4/icon.png
+  adaptive layer foreground res/mipmap-xxxhdpi/ig_launcher_foreground.png <- res/drawable-xxxhdpi-v4/icon.png
+icon files ported: 15
 old colors: 139 old styles: 83
   color blue_9 -> #ff02080d
   color green_8 -> #ff1e380d
@@ -20,10 +36,9 @@ old colors: 139 old styles: 83
   color red_7 -> #ff78141c
   color red_8 -> #ff480c11
   color red_9 -> #ff180405
-  updated res/values/colors.xml
   style EditTextStyle android:textColorHint -> #ffa5a7aa
   style+ IgAutoCompleteTextView android:textColorHint -> #ffa5a7aa
-  skip missing res IgDialog android:windowBackground @android:color/transparent
+  style+ IgDialog android:windowBackground -> @android:color/transparent
   style IgTranslucentWindow android:windowBackground -> #00000000
-  updated res/values/styles.xml
-theme entries ported: 20
+theme entries ported: 21
+alias entries normalized: 0
